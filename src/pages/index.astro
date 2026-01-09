@@ -1,0 +1,392 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const klachten = [
+  { naam: 'Rugklachten', beschrijving: 'Hernia, lage rugpijn, ischias', icon: '🔙', href: '/kennisbank/rugklachten-behandeling' },
+  { naam: 'Nekklachten', beschrijving: 'Nekpijn, whiplash, stijve nek', icon: '🦒', href: '/kennisbank/nekklachten-behandeling' },
+  { naam: 'Hoofdpijn', beschrijving: 'Migraine, spanningshoofdpijn', icon: '🤕', href: '/kennisbank/hoofdpijn-migraine-behandeling' },
+  { naam: 'Schouderklachten', beschrijving: 'Frozen shoulder, pijn', icon: '💪', href: '/kennisbank/schouderklachten-behandeling' },
+  { naam: 'Bekkenklachten', beschrijving: 'Scheefstand, SI-gewricht', icon: '🦴', href: '/kennisbank/bekkenklachten-behandeling' },
+  { naam: 'Duizeligheid', beschrijving: 'Cervicogene duizeligheid', icon: '😵', href: '/kennisbank/duizeligheid-behandeling' },
+];
+
+const stappen = [
+  { nummer: 1, titel: 'Telefonisch Contact', beschrijving: 'Neem contact op via telefoon om een afspraak te maken. We bespreken kort uw klachten.' },
+  { nummer: 2, titel: 'Intake & Onderzoek', beschrijving: 'Bij uw eerste bezoek doen we een uitgebreid onderzoek om de oorzaak van uw klachten te vinden.' },
+  { nummer: 3, titel: 'Behandeling', beschrijving: 'Met precisie en mildheid worden standsafwijkingen gecorrigeerd. Vaak is direct verlichting merkbaar.' },
+];
+
+const usps = [
+  { titel: '50+ Jaar', subtitel: 'Ervaring', beschrijving: 'Decennia van verfijning en duizenden behandelingen' },
+  { titel: 'Unieke', subtitel: 'Methode', beschrijving: 'Nergens anders te vinden, persoonlijk doorgegeven' },
+  { titel: 'Precisie', subtitel: '& Mildheid', beschrijving: 'Niet door kracht, maar door nauwkeurigheid' },
+];
+---
+
+<Layout title="Home">
+  <Navbar slot="header" />
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[90vh] flex items-center bg-gradient-to-br from-emerald-50 via-white to-emerald-50 overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute -top-40 -right-40 w-96 h-96 bg-emerald-100 rounded-full opacity-50 blur-3xl"></div>
+      <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-emerald-200 rounded-full opacity-30 blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Badge -->
+        <div class="inline-flex items-center px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium mb-6 animate-fade-in">
+          <span class="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+          Manuele Therapie Zoetermeer
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 animate-slide-up">
+          De Methode de Haas
+          <span class="block text-emerald-600 mt-2">Precies. Mild. Doeltreffend.</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-slide-up delay-100">
+          Een unieke vorm van manuele therapie, ontwikkeld door Wil de Haas gedurende meer dan 50 jaar praktijkervaring.
+          Wanneer botstructuren weer exact in hun natuurlijke stand worden gebracht, ontstaat ruimte voor herstel.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up delay-200">
+          <a href="/contact" class="btn btn-primary px-8 py-4 text-base">
+            Maak een Afspraak
+            <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a href="/methode-de-haas" class="btn btn-secondary px-8 py-4 text-base">
+            Ontdek de Methode
+          </a>
+        </div>
+
+        <!-- Trust badges -->
+        <div class="flex flex-wrap items-center justify-center gap-6 mt-12 animate-fade-in delay-300">
+          <div class="flex items-center text-gray-600">
+            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span class="text-sm">50+ jaar ervaring</span>
+          </div>
+          <div class="flex items-center text-gray-600">
+            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span class="text-sm">Duizenden behandelingen</span>
+          </div>
+          <div class="flex items-center text-gray-600">
+            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span class="text-sm">Zoetermeer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+      <a href="#waarom" class="text-gray-400 hover:text-emerald-600 transition-colors">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- USP Section -->
+  <section id="waarom" class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="section-title">Waarom de Methode de Haas?</h2>
+        <p class="section-subtitle mx-auto">
+          De methode herstelt balans in het lichaam, vermindert spanning in het zenuwstelsel en creeert ruimte voor natuurlijk herstel.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {usps.map((usp) => (
+          <div class="card p-8 text-center">
+            <div class="text-4xl font-bold text-emerald-600 mb-1">{usp.titel}</div>
+            <div class="text-lg font-medium text-gray-900 mb-3">{usp.subtitel}</div>
+            <p class="text-gray-600">{usp.beschrijving}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Quote -->
+      <div class="mt-16 max-w-3xl mx-auto text-center">
+        <blockquote class="text-xl sm:text-2xl text-gray-700 italic">
+          "Niet door kracht, maar door precisie. Niet door forceren, maar door begrijpen."
+        </blockquote>
+        <p class="mt-4 text-emerald-600 font-medium">— De filosofie van Wil de Haas</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wat is Methode de Haas -->
+  <section class="section bg-gradient-emerald">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="badge badge-emerald mb-4">Over de Methode</span>
+          <h2 class="section-title">Wat is de Methode de Haas?</h2>
+          <div class="prose mt-6">
+            <p>
+              <strong>De Methode de Haas</strong> is een unieke vorm van manuele therapie die zich richt op het nauwkeurig herstellen van de natuurlijke stand van wervels, gewrichten en het bekken.
+            </p>
+            <p>
+              Uit duizenden behandelingen en decennia van verfijning ontstond een precieze vorm van re-alignment — mild maar doeltreffend. De methode kijkt niet alleen naar de klacht, maar naar het hele lichaam als samenhangend systeem.
+            </p>
+            <p>
+              Het is een benadering die even eenvoudig als diepgaand is — en die alleen door jarenlange ervaring volledig te doorgronden valt.
+            </p>
+          </div>
+          <a href="/methode-de-haas" class="btn btn-primary mt-6">
+            Meer over de Methode
+            <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="relative">
+          <div class="aspect-[4/3] bg-emerald-200 rounded-2xl overflow-hidden">
+            <div class="absolute inset-0 flex items-center justify-center text-emerald-600">
+              <svg class="w-24 h-24 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+          </div>
+          <!-- Floating card -->
+          <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl max-w-xs">
+            <p class="text-gray-600 text-sm italic">
+              "Wil de Haas is echt een kundig man. Zijn methode werkt echt."
+            </p>
+            <p class="text-emerald-600 font-medium text-sm mt-2">— Patient review</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Klachten Section -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="section-title">Welke Klachten Behandelen We?</h2>
+        <p class="section-subtitle mx-auto">
+          De Methode de Haas is effectief bij diverse klachten aan rug, nek, gewrichten en meer.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {klachten.map((klacht) => (
+          <a href={klacht.href} class="card p-6 group">
+            <div class="flex items-start space-x-4">
+              <div class="text-3xl">{klacht.icon}</div>
+              <div>
+                <h3 class="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
+                  {klacht.naam}
+                </h3>
+                <p class="text-gray-600 text-sm mt-1">{klacht.beschrijving}</p>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center text-emerald-600 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              Lees meer
+              <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/kennisbank" class="btn btn-secondary">
+          Bekijk alle klachten in onze kennisbank
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hoe Werkt Het -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="section-title">Hoe Werkt Het?</h2>
+        <p class="section-subtitle mx-auto">
+          In drie stappen naar verlichting van uw klachten.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {stappen.map((stap, index) => (
+          <div class="relative">
+            {/* Connecting line */}
+            {index < stappen.length - 1 && (
+              <div class="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-emerald-200"></div>
+            )}
+
+            <div class="relative bg-white rounded-xl p-8 text-center shadow-sm">
+              <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-2xl font-bold text-emerald-600">{stap.nummer}</span>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">{stap.titel}</h3>
+              <p class="text-gray-600">{stap.beschrijving}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Over Wil de Haas -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <div class="aspect-square bg-gray-100 rounded-2xl overflow-hidden">
+            <img
+              src="/images/wil-de-haas.jpg"
+              alt="Wil de Haas met Erik Berkelaar en Marieke Bezuijen - overdracht van de Methode de Haas"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <span class="badge badge-emerald mb-4">De Grondlegger</span>
+          <h2 class="section-title">Wil de Haas</h2>
+          <div class="prose mt-6">
+            <p>
+              Wil de Haas is een pionier binnen de manuele therapie. Meer dan vijftig jaar lang wijdde hij zijn werk aan een fundamentele vraag: <em>wat gebeurt er wanneer botstructuren weer exact in hun natuurlijke stand worden gebracht?</em>
+            </p>
+            <p>
+              Uit duizenden behandelingen en decennia van verfijning ontstond de Methode de Haas — een unieke, precieze vorm van re-alignment waarbij wervels, gewrichten en het bekken op een milde maar doeltreffende manier worden uitgelijnd.
+            </p>
+            <p>
+              Met zijn naderende terugtreden heeft Wil de Haas zijn kennis en vakmanschap bewust overgedragen aan een nieuwe generatie therapeuten.
+            </p>
+          </div>
+          <a href="/wil-de-haas" class="btn btn-primary mt-6">
+            Lees het verhaal van Wil de Haas
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Therapeuten -->
+  <section class="section bg-gradient-emerald">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="badge badge-emerald mb-4">De Methode Leeft Voort</span>
+        <h2 class="section-title">Onze Therapeuten</h2>
+        <p class="section-subtitle mx-auto">
+          De Methode de Haas wordt vandaag voortgezet door Marieke Bezuijen en Erik Berkelaar, beiden persoonlijk door Wil de Haas opgeleid.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Marieke -->
+        <div class="card p-8 text-center">
+          <div class="w-24 h-24 rounded-full mx-auto mb-6 overflow-hidden">
+            <img
+              src="/images/marieke.jpg"
+              alt="Marieke Bezuijen - Therapeut Methode de Haas"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900">Marieke Bezuijen</h3>
+          <p class="text-emerald-600 font-medium mt-1">Therapeut</p>
+          <p class="text-gray-600 mt-4">
+            Persoonlijk opgeleid door Wil de Haas. Werkt vanuit dezelfde principes van precisie en zorgvuldigheid.
+          </p>
+        </div>
+
+        <!-- Erik -->
+        <div class="card p-8 text-center">
+          <div class="w-24 h-24 rounded-full mx-auto mb-6 overflow-hidden">
+            <img
+              src="/images/erik.jpg"
+              alt="Erik Berkelaar - Therapeut Methode de Haas"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900">Erik Berkelaar</h3>
+          <p class="text-emerald-600 font-medium mt-1">Therapeut</p>
+          <p class="text-gray-600 mt-4">
+            Persoonlijk opgeleid door Wil de Haas. Zet de traditie van vakmanschap en toewijding voort.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/therapeuten" class="btn btn-primary">
+          Meer over onze therapeuten
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-emerald-50 rounded-2xl p-8 md:p-12">
+          <div class="flex items-center justify-center mb-6">
+            {[1,2,3,4,5].map(() => (
+              <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-xl md:text-2xl text-gray-700 text-center italic">
+            "Ik ben bij 4 verschillende fysiotherapeuten geweest, chiropractors, manuele therapie, acupunctuur en dry-needling. Niets komt in de buurt van wat er tijdens deze drie sessies bij meneer de Haas is gebeurd."
+          </blockquote>
+          <p class="text-center mt-6 text-emerald-600 font-medium">— Patient ervaring</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section bg-gradient-dark text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+          Klaar om van uw klacht af te komen?
+        </h2>
+        <p class="text-emerald-100 text-lg mb-8">
+          Neem contact met ons op voor een afspraak. We bespreken graag hoe de Methode de Haas u kan helpen.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/contact" class="btn bg-white text-emerald-700 hover:bg-gray-100 px-8 py-4 text-base font-semibold">
+            Maak een Afspraak
+          </a>
+          <a href="tel:+31793237900" class="btn border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-base">
+            <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            079 323 7900
+          </a>
+        </div>
+        <p class="mt-8 text-emerald-200 text-sm">
+          Gezondheidscentrum Corporalis · Dorpsstraat 182B/C/D, 2712 AR Zoetermeer
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

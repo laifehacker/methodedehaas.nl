@@ -1,0 +1,519 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+const vergelijking = [
+  {
+    aspect: 'Aanpak',
+    fysiotherapie: 'Actieve oefentherapie, bewegingstraining en conditieverbetering',
+    manueleTherapie: 'Passieve mobilisaties en manipulaties van gewrichten',
+    methodeDeHaas: 'Precisie re-alignment van botstructuren zonder kracht'
+  },
+  {
+    aspect: 'Focus',
+    fysiotherapie: 'Versterken van spieren, verbeteren van bewegingspatronen',
+    manueleTherapie: 'Verbeteren van gewrichtsmobiliteit en bewegingsbereik',
+    methodeDeHaas: 'Herstellen van exacte natuurlijke stand van wervels en gewrichten'
+  },
+  {
+    aspect: 'Werkwijze',
+    fysiotherapie: 'Actieve deelname patiënt met oefeningen en training',
+    manueleTherapie: 'Passieve behandeling met mobilisaties en manipulaties',
+    methodeDeHaas: 'Passieve behandeling met millimeter-nauwkeurige correcties'
+  },
+  {
+    aspect: 'Behandelduur',
+    fysiotherapie: '30-60 minuten inclusief oefeningen',
+    manueleTherapie: '30-45 minuten',
+    methodeDeHaas: '15-30 minuten zeer gericht werk'
+  },
+  {
+    aspect: 'Vergoeding',
+    fysiotherapie: 'Basisverzekering (na eigen risico en met beperking)',
+    manueleTherapie: 'Basisverzekering bij geregistreerde therapeuten',
+    methodeDeHaas: 'Aanvullende verzekering (alternatieve geneeswijzen)'
+  },
+];
+
+const wanneerWat = [
+  {
+    situatie: 'Na operatie of ernstig letsel',
+    aanbeveling: 'Fysiotherapie',
+    reden: 'Spierversterking en bewegingstraining zijn essentieel voor herstel na operaties of ernstige blessures.'
+  },
+  {
+    situatie: 'Chronische spier- en gewrichtsklachten',
+    aanbeveling: 'Manuele Therapie',
+    reden: 'Gewrichtsmobilisaties kunnen helpen bij langdurige stijfheid en bewegingsbeperkingen.'
+  },
+  {
+    situatie: 'Standsafwijkingen in wervelkolom of bekken',
+    aanbeveling: 'Methode de Haas',
+    reden: 'De precisie-correcties van de Methode de Haas zijn specifiek ontwikkeld voor het herstellen van standsafwijkingen.'
+  },
+  {
+    situatie: 'Sportblessure met instabiliteit',
+    aanbeveling: 'Fysiotherapie',
+    reden: 'Actieve training om stabiliteit en kracht weer op te bouwen is hier het belangrijkste.'
+  },
+  {
+    situatie: 'Onverklaarbare pijn zonder duidelijke oorzaak',
+    aanbeveling: 'Methode de Haas',
+    reden: 'Subtiele standsafwijkingen kunnen klachten veroorzaken die met andere methoden niet worden gevonden.'
+  },
+  {
+    situatie: 'Gewrichtsslijtage (artrose)',
+    aanbeveling: 'Combinatie mogelijk',
+    reden: 'Fysiotherapie voor spierversterking, Methode de Haas voor optimale stand en belasting.'
+  },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Verschil Manuele Therapie en Fysiotherapie - Methode de Haas",
+  "description": "Wat is het verschil tussen fysiotherapie, manuele therapie en de Methode de Haas? Een heldere vergelijking om de juiste keuze te maken.",
+  "author": {
+    "@type": "Organization",
+    "name": "Methode de Haas"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage"
+  }
+};
+---
+
+<Layout
+  title="Verschil Manuele Therapie en Fysiotherapie"
+  description="Wat is het verschil tussen fysiotherapie, manuele therapie en de Methode de Haas? Een heldere vergelijking om de juiste keuze te maken."
+  keywords={['manuele therapie', 'fysiotherapie', 'verschil', 'methode de haas', 'behandeling kiezen', 'vergelijking']}
+  schema={schema}
+>
+  <Navbar slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-16 lg:py-24 bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="badge badge-emerald mb-4">Praktische Informatie</span>
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          Verschil Manuele Therapie en Fysiotherapie
+        </h1>
+        <p class="text-xl text-gray-600">
+          Een heldere uitleg over het verschil tussen fysiotherapie, manuele therapie en de Methode de Haas. Wat past bij uw klacht?
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introductie -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="prose prose-lg mx-auto">
+          <p class="lead">
+            Veel mensen zijn in de war over het verschil tussen fysiotherapie, manuele therapie
+            en specialistische methoden zoals de Methode de Haas. Wanneer kies je wat? En wat
+            zijn de belangrijkste verschillen? Deze pagina geeft duidelijkheid.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wat is Fysiotherapie -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Wat is Fysiotherapie?</h2>
+
+        <div class="prose prose-lg mx-auto">
+          <p>
+            <strong>Fysiotherapie</strong> is een behandelvorm gericht op het verbeteren van
+            beweging en functie van het lichaam. Het belangrijkste kenmerk van fysiotherapie
+            is de <em>actieve</em> benadering: de patiënt doet zelf oefeningen en trainingen
+            onder begeleiding van de fysiotherapeut.
+          </p>
+
+          <h3>Kenmerken van Fysiotherapie</h3>
+          <ul>
+            <li><strong>Oefentherapie:</strong> Gerichte oefeningen om spieren te versterken en mobiliteit te verbeteren</li>
+            <li><strong>Conditietraining:</strong> Verbeteren van uithoudingsvermogen en algemene fitheid</li>
+            <li><strong>Bewegingsanalyse:</strong> Bestuderen van bewegingspatronen om inefficiënties op te sporen</li>
+            <li><strong>Adviezen:</strong> Over houding, ergonomie en dagelijkse activiteiten</li>
+            <li><strong>Revalidatie:</strong> Herstel na operaties, ongelukken of blessures</li>
+          </ul>
+
+          <h3>Waar is Fysiotherapie Goed Voor?</h3>
+          <p>
+            Fysiotherapie is vooral effectief bij:
+          </p>
+          <ul>
+            <li>Spierzwakte door inactiviteit of letsel</li>
+            <li>Revalidatie na operaties (knie, heup, schouder)</li>
+            <li>Chronische klachten die gebaat zijn bij versterking</li>
+            <li>Sportblessures waarbij spierversterking nodig is</li>
+            <li>Longrevalidatie na ernstige ziektes</li>
+            <li>Balansstoornissen en valpreventie bij ouderen</li>
+          </ul>
+
+          <p>
+            De fysiotherapeut geeft u "huiswerk": oefeningen die u thuis moet doen om het
+            effect van de therapie te vergroten. Uw eigen inzet is cruciaal voor het resultaat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wat is Manuele Therapie -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Wat is Manuele Therapie?</h2>
+
+        <div class="prose prose-lg mx-auto">
+          <p>
+            <strong>Manuele therapie</strong> is een specialisatie binnen de fysiotherapie, gericht
+            op het behandelen van gewrichts- en spierklachten met behulp van specifieke handgrepen.
+            Het belangrijkste verschil met reguliere fysiotherapie is de <em>passieve</em> benadering:
+            de therapeut behandelt, de patiënt ondergaat.
+          </p>
+
+          <h3>Kenmerken van Manuele Therapie</h3>
+          <ul>
+            <li><strong>Mobilisaties:</strong> Zachte, ritmische bewegingen om gewrichten losser te maken</li>
+            <li><strong>Manipulaties:</strong> Korte, snelle bewegingen die vaak gepaard gaan met een "krak"</li>
+            <li><strong>Weke delen technieken:</strong> Massage en stretching van spieren en bindweefsel</li>
+            <li><strong>Tractie:</strong> Voorzichtig uitrekken van gewrichten om ruimte te creëren</li>
+            <li><strong>Neurologische testen:</strong> Beoordeling van zenuwfunctie</li>
+          </ul>
+
+          <h3>Waar is Manuele Therapie Goed Voor?</h3>
+          <p>
+            Manuele therapie is vooral effectief bij:
+          </p>
+          <ul>
+            <li>Gewrichtsstijfheid en bewegingsbeperking</li>
+            <li>Chronische nek- en rugklachten</li>
+            <li>Hoofdpijn door nekklachten</li>
+            <li>Uitstralende pijn in armen of benen</li>
+            <li>Gewrichtsklachten door artrose</li>
+            <li>Kaakklachten (TMD)</li>
+          </ul>
+
+          <h3>Verschil met Fysiotherapie</h3>
+          <p>
+            Een manueel therapeut heeft na de fysiotherapie opleiding een aanvullende specialisatie
+            van ongeveer 2 jaar gevolgd. Manuele therapie richt zich meer op het gewricht zelf,
+            terwijl fysiotherapie zich vooral richt op de spieren en beweging rondom het gewricht.
+          </p>
+
+          <blockquote>
+            "Je zou kunnen zeggen: fysiotherapie traint het lichaam, manuele therapie mobiliseert
+            het lichaam."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wat is Methode de Haas -->
+  <section class="section bg-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Wat is de Methode de Haas?</h2>
+
+        <div class="prose prose-lg mx-auto">
+          <p>
+            De <strong>Methode de Haas</strong> is een unieke, verfijnde vorm van manuele therapie
+            die zich onderscheidt door extreme precisie en mildheid. Ontwikkeld door Wil de Haas
+            gedurende 50+ jaar praktijkervaring, richt deze methode zich op het millimeter-nauwkeurig
+            herstellen van de natuurlijke stand van wervels, gewrichten en het bekken.
+          </p>
+
+          <h3>Het Unieke Principe: Re-alignment</h3>
+          <p>
+            Waar fysiotherapie traint en manuele therapie mobiliseert, <em>re-alignt</em> de Methode
+            de Haas. Dit betekent: het exact terugbrengen van botstructuren in hun natuurlijke positie.
+          </p>
+
+          <p>
+            Het principe is: <strong>"Niet door kracht, maar door precisie"</strong>. Er wordt niet
+            geforceerd of gemanipuleerd met krachtige bewegingen. In plaats daarvan wordt met
+            uiterste nauwkeurigheid en voorzichtigheid de exacte correcte positie hersteld.
+          </p>
+
+          <h3>Kenmerken van de Methode de Haas</h3>
+          <ul>
+            <li><strong>Millimeter-precisie:</strong> Elke correctie is exact gericht op de specifieke afwijking</li>
+            <li><strong>Mildheid:</strong> Geen brute kracht, maar respectvolle druk</li>
+            <li><strong>Holistische benadering:</strong> Het hele lichaam wordt als systeem bekeken</li>
+            <li><strong>Subtiele correcties:</strong> Vaak zijn zeer kleine aanpassingen al zeer effectief</li>
+            <li><strong>Direct effect:</strong> Veel patiënten voelen direct verlichting tijdens of na behandeling</li>
+          </ul>
+
+          <h3>Waar is de Methode de Haas Goed Voor?</h3>
+          <p>
+            De Methode de Haas is bijzonder effectief bij:
+          </p>
+          <ul>
+            <li>Standsafwijkingen in wervelkolom, bekken of gewrichten</li>
+            <li>Klachten die niet reageren op reguliere fysiotherapie of manuele therapie</li>
+            <li>Onverklaarbare pijn zonder duidelijke oorzaak</li>
+            <li>Complexe, langdurige klachtenpatronen</li>
+            <li>Hoofdpijn, duizeligheid en neurologische verschijnselen door standsafwijkingen</li>
+            <li>Klachten waarbij andere behandelingen slechts tijdelijk helpen</li>
+          </ul>
+
+          <div class="bg-white p-6 rounded-xl my-8">
+            <p class="font-semibold text-gray-900 mb-2">De Essentie</p>
+            <p class="text-gray-700 mb-0">
+              Waar fysiotherapie het lichaam versterkt en manuele therapie het lichaam losser maakt,
+              brengt de Methode de Haas het lichaam terug in balans door structuren exact op hun
+              plek te zetten.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vergelijkingstabel -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="section-title text-center mb-12">Overzicht: Belangrijkste Verschillen</h2>
+
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="bg-gray-50">
+                <th class="border border-gray-200 p-4 text-left font-semibold text-gray-900">Aspect</th>
+                <th class="border border-gray-200 p-4 text-left font-semibold text-gray-900">Fysiotherapie</th>
+                <th class="border border-gray-200 p-4 text-left font-semibold text-gray-900">Manuele Therapie</th>
+                <th class="border border-gray-200 p-4 text-left font-semibold text-emerald-600">Methode de Haas</th>
+              </tr>
+            </thead>
+            <tbody>
+              {vergelijking.map((item, index) => (
+                <tr class={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td class="border border-gray-200 p-4 font-medium text-gray-900">{item.aspect}</td>
+                  <td class="border border-gray-200 p-4 text-gray-600">{item.fysiotherapie}</td>
+                  <td class="border border-gray-200 p-4 text-gray-600">{item.manueleTherapie}</td>
+                  <td class="border border-gray-200 p-4 text-gray-900 font-medium">{item.methodeDeHaas}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wanneer Kies je Wat -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="section-title text-center mb-12">Wanneer Kies je Wat?</h2>
+
+        <div class="space-y-6">
+          {wanneerWat.map((item) => (
+            <div class="card p-6">
+              <div class="flex flex-col md:flex-row md:items-center gap-4">
+                <div class="flex-grow">
+                  <h3 class="text-lg font-semibold text-gray-900 mb-2">{item.situatie}</h3>
+                  <p class="text-gray-600">{item.reden}</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <span class="inline-block px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full font-medium text-sm">
+                    {item.aanbeveling}
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12 p-6 bg-emerald-50 rounded-xl">
+          <p class="font-semibold text-gray-900 mb-2">Belangrijk om te Weten</p>
+          <p class="text-gray-700">
+            Deze aanbevelingen zijn algemeen. Elke situatie is uniek en soms is een combinatie
+            van behandelingen het meest effectief. Twijfelt u? Neem contact op en bespreek uw
+            situatie. We adviseren u graag over de beste aanpak voor uw klachten.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Combinaties Mogelijk -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Kunnen Deze Behandelingen Worden Gecombineerd?</h2>
+
+        <div class="prose prose-lg mx-auto">
+          <p>
+            Absoluut. Sterker nog, soms is een combinatie het meest effectief. Bijvoorbeeld:
+          </p>
+
+          <h3>Methode de Haas + Fysiotherapie</h3>
+          <p>
+            De Methode de Haas herstelt de stand van wervels en gewrichten. Fysiotherapie versterkt
+            vervolgens de spieren om deze nieuwe, correcte stand te ondersteunen en stabiliseren.
+            Dit is een krachtige combinatie bij chronische klachten.
+          </p>
+
+          <h3>Methode de Haas + Manuele Therapie</h3>
+          <p>
+            Als er naast standsafwijkingen ook stijfheid in gewrichten is, kan manuele therapie
+            helpen om mobiliteit te vergroten. De Methode de Haas zorgt voor de exacte correctie,
+            manuele therapie voor het losser maken van strakke structuren.
+          </p>
+
+          <h3>Alle Drie</h3>
+          <p>
+            Bij complexe, langdurige klachten kan een drieledige aanpak soms het beste resultaat
+            geven: de Methode de Haas voor exacte correcties, manuele therapie voor mobiliteit,
+            en fysiotherapie voor kracht en stabiliteit.
+          </p>
+
+          <blockquote>
+            "Elke behandelvorm heeft zijn eigen kracht. Soms is één methode voldoende, soms is
+            een combinatie de sleutel tot succes."
+          </blockquote>
+
+          <h3>Volgorde Belangrijk</h3>
+          <p>
+            Als u kiest voor een combinatie, is de volgorde belangrijk. Over het algemeen adviseren
+            we om eerst met de Methode de Haas te beginnen. Als de stand van het skelet correct is,
+            werken andere behandelingen effectiever.
+          </p>
+
+          <p>
+            Denk aan een huis: als de fundering niet goed staat, heeft het weinig zin om de muren
+            te versterken. Zet eerst de fundering recht (Methode de Haas), dan kunnen de muren
+            (fysiotherapie) goed worden ondersteund.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nog Twijfels -->
+  <section class="section bg-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Nog Steeds Twijfels?</h2>
+
+        <div class="prose prose-lg mx-auto">
+          <p>
+            Het kan lastig zijn om te bepalen welke behandeling het beste bij uw situatie past.
+            Hier zijn enkele praktische tips:
+          </p>
+
+          <h3>Heb je al Fysiotherapie of Manuele Therapie Geprobeerd?</h3>
+          <p>
+            Als u al fysiotherapie of manuele therapie heeft geprobeerd en de klachten blijven
+            terugkeren of verbeteren niet structureel, kan de Methode de Haas een alternatief zijn.
+            Mogelijk ligt de oorzaak dieper dan wordt aangepakt met reguliere therapieën.
+          </p>
+
+          <h3>Zijn je Klachten Onverklaarbaar?</h3>
+          <p>
+            Heeft u pijn of ongemak maar is er geen duidelijke oorzaak gevonden? De Methode de Haas
+            is gespecialiseerd in het opsporen van subtiele standsafwijkingen die andere behandelaars
+            mogelijk over het hoofd zien.
+          </p>
+
+          <h3>Wil je Vooral Versterken of Herstellen?</h3>
+          <p>
+            Als uw doel vooral is om sterker te worden (na operatie, blessure of inactiviteit),
+            is fysiotherapie waarschijnlijk de beste keus. Als het doel is om pijn te verminderen
+            en balans te herstellen, kijk dan naar manuele therapie of de Methode de Haas.
+          </p>
+
+          <h3>Bespreek het met een Professional</h3>
+          <p>
+            De beste manier om zekerheid te krijgen, is een intake te plannen. Tijdens de eerste
+            afspraak bij de Methode de Haas wordt uitgebreid gekeken naar uw situatie. Als blijkt
+            dat een andere behandelvorm beter past, zullen we u dat eerlijk vertellen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="section bg-gradient-dark text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">
+          Wilt u Weten of de Methode de Haas iets voor u Is?
+        </h2>
+        <p class="text-emerald-100 text-lg mb-8">
+          Plan een intake en ontdek wat de Methode de Haas voor uw klachten kan betekenen.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/contact" class="btn bg-white text-emerald-700 hover:bg-gray-100 px-8 py-4 text-base font-semibold">
+            Maak een Afspraak
+          </a>
+          <a href="/kennisbank/eerste-behandeling-verwachten" class="btn bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-base font-semibold">
+            Over de Eerste Behandeling
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gerelateerde Artikelen -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-8">Gerelateerde Artikelen</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="/kennisbank/eerste-behandeling-verwachten" class="card p-6 group">
+            <h3 class="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors mb-2">
+              Wat te Verwachten bij de Eerste Behandeling
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Alles over uw eerste afspraak bij de Methode de Haas
+            </p>
+          </a>
+
+          <a href="/methode-de-haas" class="card p-6 group">
+            <h3 class="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors mb-2">
+              Over de Methode de Haas
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Leer meer over de unieke behandelmethode
+            </p>
+          </a>
+
+          <a href="/kennisbank/behandeltraject-duur" class="card p-6 group">
+            <h3 class="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors mb-2">
+              Hoelang Duurt een Behandeltraject?
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Informatie over de duur en frequentie van behandelingen
+            </p>
+          </a>
+
+          <a href="/veelgestelde-vragen" class="card p-6 group">
+            <h3 class="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors mb-2">
+              Veelgestelde Vragen
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Antwoorden op de meest gestelde vragen
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

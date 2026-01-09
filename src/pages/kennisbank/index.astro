@@ -1,0 +1,147 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+const categories = [
+  {
+    naam: 'Over de Methode',
+    beschrijving: 'Leer alles over de Methode de Haas',
+    artikelen: [
+      { titel: 'Wat is de Methode de Haas?', href: '/kennisbank/wat-is-methode-de-haas' },
+      { titel: 'Geschiedenis van de Methode', href: '/kennisbank/geschiedenis-methode-de-haas' },
+      { titel: 'Hoe werkt de Methode?', href: '/kennisbank/hoe-werkt-methode-de-haas' },
+      { titel: 'Methode de Haas vs Andere Therapieën', href: '/kennisbank/methode-de-haas-vs-andere-therapieen' },
+      { titel: 'Wetenschappelijke Basis', href: '/kennisbank/wetenschappelijke-basis-methode-de-haas' },
+    ]
+  },
+  {
+    naam: 'Wil de Haas',
+    beschrijving: 'Over de grondlegger en zijn levenswerk',
+    artikelen: [
+      { titel: 'Biografie Wil de Haas', href: '/kennisbank/wil-de-haas-biografie' },
+      { titel: 'Het Levenswerk', href: '/kennisbank/wil-de-haas-levenswerk' },
+      { titel: 'Van Pijnacker naar Zoetermeer', href: '/kennisbank/wil-de-haas-pijnacker-praktijk' },
+      { titel: 'De Erfenis', href: '/kennisbank/wil-de-haas-erfenis' },
+    ]
+  },
+  {
+    naam: 'Behandelbare Klachten',
+    beschrijving: 'Klachten die we behandelen met de Methode de Haas',
+    artikelen: [
+      { titel: 'Rugklachten Behandeling', href: '/kennisbank/rugklachten-behandeling' },
+      { titel: 'Nekklachten Behandeling', href: '/kennisbank/nekklachten-behandeling' },
+      { titel: 'Hoofdpijn & Migraine', href: '/kennisbank/hoofdpijn-migraine-behandeling' },
+      { titel: 'Schouderklachten', href: '/kennisbank/schouderklachten-behandeling' },
+      { titel: 'Heupklachten', href: '/kennisbank/heupklachten-behandeling' },
+      { titel: 'Knieklachten', href: '/kennisbank/knieklachten-behandeling' },
+      { titel: 'Bekkenklachten', href: '/kennisbank/bekkenklachten-behandeling' },
+      { titel: 'Duizeligheid', href: '/kennisbank/duizeligheid-behandeling' },
+      { titel: 'Uitstralende Pijn', href: '/kennisbank/uitstraling-arm-been' },
+      { titel: 'Chronische Pijn', href: '/kennisbank/chronische-pijn-behandeling' },
+      { titel: 'Sportblessures', href: '/kennisbank/sportblessures-behandeling' },
+      { titel: 'Houdingsklachten', href: '/kennisbank/houdingsklachten-behandeling' },
+    ]
+  },
+  {
+    naam: 'Anatomie & Begrippen',
+    beschrijving: 'Meer begrip over uw lichaam',
+    artikelen: [
+      { titel: 'De Wervelkolom', href: '/kennisbank/wervelkolom-uitleg' },
+      { titel: 'Het Bekken', href: '/kennisbank/bekken-anatomie' },
+      { titel: 'Gewrichten', href: '/kennisbank/gewrichten-uitleg' },
+      { titel: 'Het Zenuwstelsel', href: '/kennisbank/zenuwstelsel-uitleg' },
+      { titel: 'Wat is Re-alignment?', href: '/kennisbank/wat-is-re-alignment' },
+    ]
+  },
+  {
+    naam: 'Praktische Informatie',
+    beschrijving: 'Alles wat u moet weten over uw behandeling',
+    artikelen: [
+      { titel: 'Eerste Behandeling', href: '/kennisbank/eerste-behandeling-verwachten' },
+      { titel: 'Duur Behandeltraject', href: '/kennisbank/behandeltraject-duur' },
+      { titel: 'Vergoeding Zorgverzekering', href: '/kennisbank/vergoeding-zorgverzekering' },
+      { titel: 'Verschil Manuele Therapie & Fysiotherapie', href: '/kennisbank/verschil-manuele-therapie-fysiotherapie' },
+    ]
+  },
+];
+---
+
+<Layout
+  title="Kennisbank"
+  description="Ontdek onze uitgebreide kennisbank over de Methode de Haas, behandelbare klachten, anatomie en praktische informatie."
+  keywords={['kennisbank', 'artikelen', 'informatie', 'methode de haas', 'klachten', 'behandeling']}
+>
+  <Navbar slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-16 lg:py-24 bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="badge badge-emerald mb-4">Kennisbank</span>
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          Leer Meer Over de Methode de Haas
+        </h1>
+        <p class="text-xl text-gray-600">
+          Ontdek alles over de methode, behandelbare klachten, anatomie en meer in onze uitgebreide kennisbank.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        {categories.map((category, index) => (
+          <div class={index > 0 ? 'mt-16' : ''}>
+            <div class="mb-8">
+              <h2 class="text-2xl font-bold text-gray-900 mb-2">{category.naam}</h2>
+              <p class="text-gray-600">{category.beschrijving}</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {category.artikelen.map((artikel) => (
+                <a
+                  href={artikel.href}
+                  class="card p-5 group flex items-center justify-between"
+                >
+                  <span class="font-medium text-gray-900 group-hover:text-emerald-600 transition-colors">
+                    {artikel.titel}
+                  </span>
+                  <svg class="w-5 h-5 text-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">
+          Heeft u een vraag die niet in de kennisbank staat?
+        </h2>
+        <p class="text-gray-600 mb-8">
+          Neem gerust contact met ons op. We helpen u graag verder.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/contact" class="btn btn-primary px-8 py-4">
+            Contact Opnemen
+          </a>
+          <a href="/veelgestelde-vragen" class="btn btn-secondary px-8 py-4">
+            Veelgestelde Vragen
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

@@ -1,0 +1,360 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+const faqs = [
+  {
+    vraag: 'Wanneer kan ik na een behandeling weer sporten?',
+    antwoord: 'Dit hangt af van de ernst van de blessure en het type sport. Bij lichte blessures kunt u vaak binnen enkele dagen geleidelijk weer beginnen. Bij ernstigere blessures adviseren we rust en een opbouwschema. We bespreken dit altijd individueel. Het is belangrijk om niet te snel te veel te doen - geleidelijke opbouw voorkomt herblessures.'
+  },
+  {
+    vraag: 'Kan de Methode de Haas sportblessures voorkomen?',
+    antwoord: 'Ja, preventief. Veel sportblessures ontstaan door onderliggende standsafwijkingen of asymmetrieën. Een scheef bekken zorgt voor ongelijke belasting, een gedraaide wervel beperkt de mobiliteit. Door deze afwijkingen te corrigeren voordat ze tot blessures leiden, reduceren we het risico aanzienlijk. Veel sporters komen preventief voor controle.'
+  },
+  {
+    vraag: 'Werken jullie samen met sportfysiotherapeuten?',
+    antwoord: 'We zien onze behandeling als complementair aan sportfysiotherapie. Wij richten ons op het herstel van de structuur - de uitlijning van wervels, bekken en gewrichten. Sportfysiotherapie richt zich op spierversterking en functioneel herstel. De combinatie is vaak ideaal: wij zorgen voor de juiste structurele basis, de fysiotherapeut bouwt daarop verder met gerichte oefeningen.'
+  },
+];
+
+const gerelateerd = [
+  { titel: 'Rugklachten Behandeling', href: '/kennisbank/rugklachten-behandeling' },
+  { titel: 'Nekklachten Behandeling', href: '/kennisbank/nekklachten-behandeling' },
+  { titel: 'Bekkenklachten', href: '/kennisbank/bekkenklachten-behandeling' },
+  { titel: 'Wat is Re-alignment?', href: '/kennisbank/wat-is-re-alignment' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Sportblessures Behandeling - Methode de Haas",
+  "description": "Behandeling en preventie van sportblessures met de Methode de Haas. Sneller herstel en preventie door structurele re-alignment.",
+  "medicalAudience": "Patient",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Sportblessures"
+  }
+};
+---
+
+<Layout
+  title="Sportblessures Behandeling"
+  description="Behandeling en preventie van sportblessures met de Methode de Haas. Herstel sneller en voorkom herblessures door structurele re-alignment."
+  keywords={['sportblessures', 'sportblessure behandeling', 'blessure herstel', 'sportblessure preventie', 'loopblessures', 'fitnessblessures']}
+  schema={schema}
+>
+  <Navbar slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-16 lg:py-24 bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <a href="/kennisbank" class="inline-flex items-center text-emerald-600 hover:text-emerald-700 mb-6 group">
+          <svg class="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7 7 7-7" />
+          </svg>
+          Terug naar kennisbank
+        </a>
+
+        <span class="badge badge-emerald mb-4">Behandelbare Klachten</span>
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          Sportblessures Behandeling
+        </h1>
+        <p class="text-xl text-gray-600">
+          Sportblessure die maar niet overgaat? Ontdek hoe structureel herstel u sneller terug
+          in actie brengt en toekomstige blessures voorkomt.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="prose prose-lg mx-auto">
+          <h2>Sportblessures en structurele oorzaken</h2>
+          <p>
+            <strong>Sportblessures</strong> worden vaak gezien als iets onvermijdelijks bij sport.
+            Een verkeerde beweging, een val, overbelasting - het lijkt bij sport te horen. Maar veel
+            sportblessures hebben een diepere oorzaak: onderliggende standsafwijkingen in wervelkolom
+            of bekken die de belastbaarheid en bewegingsvrijheid beperken.
+          </p>
+          <p>
+            Wanneer uw bekken scheef staat of een wervel gedraaid is, beweegt uw lichaam asymmetrisch.
+            Dit merkt u misschien niet in het dagelijks leven, maar bij sport - met hogere belasting,
+            snellere bewegingen, meer impact - komen deze asymmetrieën naar boven. Het resultaat:
+            blessures die niet zouden moeten gebeuren bij een correct uitgelijnd lichaam.
+          </p>
+
+          <h2>Waarom sommige sportblessures niet overgaan</h2>
+          <p>
+            Een klassiek patroon: u heeft een blessure opgelopen tijdens het sporten. U rust, volgt
+            fysiotherapie, doet uw oefeningen. De acute pijn neemt af. U begint voorzichtig weer met
+            sporten. En dan... komt de blessure terug. Dezelfde plek, dezelfde klacht. Wat gebeurt hier?
+          </p>
+          <p>
+            Het probleem is dat de <strong>onderliggende structurele oorzaak</strong> niet is aangepakt.
+            De blessure is behandeld, de spier is versterkt, maar de standsafwijking die de ongelijke
+            belasting veroorzaakte is nog steeds aanwezig. Zodra u weer gaat sporten, krijgt diezelfde
+            plek weer te veel belasting. De blessure keert terug.
+          </p>
+
+          <h2>Veel voorkomende sportblessures</h2>
+          <p>
+            We zien regelmatig sporters met specifieke blessurepatronen:
+          </p>
+          <ul>
+            <li><strong>Hardlopers:</strong> Knieklachten, achillespees problemen, IT-band syndroom, plantaris fasciitis</li>
+            <li><strong>Wielrenners:</strong> Nekklachten, onderrugpijn, knieklachten</li>
+            <li><strong>Fitness:</strong> Schouderblessures, rugklachten, polsklachten</li>
+            <li><strong>Tennissers/hockeyers:</strong> Elleboogklachten, schouderproblematiek, enkelverstuikingen</li>
+            <li><strong>Voetballers:</strong> Liespijn, hamstringblessures, knieklachten</li>
+          </ul>
+          <p>
+            Wat deze blessures gemeen hebben: ze ontstaan vaak door ongelijke belasting als gevolg
+            van een standsafwijking elders in het lichaam.
+          </p>
+
+          <h2>De keten van oorzaak en gevolg</h2>
+          <p>
+            Een voorbeeld: een hardloper met terugkerende knieklachten. De knie zelf is grondig
+            onderzocht, maar er wordt niets structureels gevonden. Toch komt de pijn steeds terug
+            na enkele weken hardlopen. Waar ligt de oorzaak?
+          </p>
+          <p>
+            Bij ons onderzoek ontdekken we een bekkenscheefstand. Het bekken staat iets gedraaid,
+            waardoor het ene been functioneel korter is dan het andere. Bij elke stap landt de
+            hardloper net iets anders op het ene been dan op het andere. Dit kleine verschil -
+            misschien maar enkele millimeters - vermenigvuldigt zich met duizenden stappen. De knie
+            aan één kant krijgt structureel meer belasting. En daar ontstaat de pijn.
+          </p>
+          <p>
+            De knie zelf is niet het probleem - het bekken is het probleem. Behandel je alleen de
+            knie, dan keert de klacht terug. Herstel je het bekken, dan verdwijnt de ongelijke
+            belasting en kan de knie herstellen.
+          </p>
+
+          <h2>De Methode de Haas aanpak voor sportblessures</h2>
+          <p>
+            Bij de Methode de Haas behandelen we sportblessures op twee niveaus: we helpen bij het
+            <strong>herstel van de acute blessure</strong> en we pakken de <strong>onderliggende
+            structurele oorzaak</strong> aan om herblessures te voorkomen.
+          </p>
+          <p>
+            Tijdens het onderzoek kijken we naar meer dan alleen de blessureplek. We analyseren uw
+            hele houding, de stand van uw bekken, de uitlijning van uw wervelkolom, de mobiliteit
+            van gewrichten. We zoeken naar asymmetrieën en standsafwijkingen die uw blessure kunnen
+            verklaren.
+          </p>
+
+          <h3>Herstel door re-alignment</h3>
+          <p>
+            De behandeling richt zich op het herstellen van de natuurlijke stand van botstructuren.
+            We corrigeren het bekken, stellen wervels bij, herstellen gewrichtsmobiliteit. Hierdoor
+            creëren we een <strong>symmetrische basis</strong> waarop u weer kunt sporten zonder
+            ongelijke belasting.
+          </p>
+          <p>
+            Bij acute blessures kan re-alignment ook direct helpen. Door spanning in het lichaam te
+            verminderen en de doorbloeding te verbeteren, versnelt het natuurlijke herstelproces.
+            Veel sporters merken dat ze sneller herstellen wanneer hun lichaam structureel goed
+            uitgelijnd is.
+          </p>
+
+          <h2>Preventie van sportblessures</h2>
+          <p>
+            De beste blessure is de blessure die niet gebeurt. Preventieve behandeling bij de Methode
+            de Haas kan helpen om sportblessures te voorkomen. Door regelmatig de structuur van uw
+            lichaam te controleren en kleine afwijkingen te corrigeren voordat ze tot blessures leiden,
+            blijft u gezond sporten.
+          </p>
+          <p>
+            Veel serieuze sporters komen preventief langs, vergelijkbaar met hoe je regelmatig je auto
+            naar de garage brengt voor een check-up. We controleren de uitlijning, detecteren vroege
+            signalen van overbelasting, en corrigeren kleine afwijkingen voordat ze problematisch worden.
+          </p>
+
+          <blockquote>
+            "Als marathonloper had ik elk trainingsseizoen wel last van knieklachten. Na behandeling
+            van mijn bekkenscheefstand kon ik voor het eerst in jaren een volledig seizoen trainen
+            zonder blessures. Mijn loopstijl voelt symmetrischer en mijn tijden zijn beter dan ooit."
+          </blockquote>
+
+          <h2>Het belang van een stabiele basis</h2>
+          <p>
+            Voor sporters is een stabiele, symmetrische basis essentieel. Sport vraagt veel van uw
+            lichaam: explosieve kracht, uithoudingsvermogen, snelle richtingsveranderingen, impact
+            bij landen. Als uw fundament - het bekken en de wervelkolom - niet goed staat, moet uw
+            lichaam compenseren tijdens al deze bewegingen.
+          </p>
+          <p>
+            Deze compensaties kosten niet alleen energie (u presteert minder goed), maar verhogen
+            ook het blessurerisico. Spieren werken harder dan nodig, gewrichten worden ongelijk
+            belast, mobiliteit wordt beperkt. Door de basis op orde te brengen, creëert u optimale
+            voorwaarden voor sportprestaties.
+          </p>
+
+          <h2>Specifieke sportblessures en hun structurele oorzaken</h2>
+
+          <h3>Hardloopblessures</h3>
+          <p>
+            Bij hardlopers zien we vaak blessures die samenhangen met een bekkenscheefstand:
+            knieklachten, IT-band syndroom, achillespees problemen. Ook standsafwijkingen in de
+            voeten en enkels spelen een rol. Door het bekken recht te zetten en de wervelkolom
+            in balans te brengen, wordt de loopstijl symmetrischer.
+          </p>
+
+          <h3>Wielren en triatlon</h3>
+          <p>
+            De gebogen houding op de fiets zet de nek en onderrug onder druk. Wielrenners hebben
+            vaak nekklachten en lage rugpijn. Standsafwijkingen in de nek of lendenwervels kunnen
+            deze klachten verergeren. Ook een scheef bekken leidt tot asymmetrische krachtverdeling
+            tijdens het trappen, wat resulteert in knieklachten.
+          </p>
+
+          <h3>Krachtsport en fitness</h3>
+          <p>
+            Bij krachttraining is symmetrie cruciaal. Een scheef bekken of gedraaide wervel zorgt
+            voor ongelijke krachtsverdeling tijdens squats, deadlifts en andere oefeningen. Dit
+            verhoogt het risico op blessures enorm. We zien veel fitness sporters met rugblessures
+            die ontstaan door oefeningen uit te voeren met een niet-optimaal uitgelijnd lichaam.
+          </p>
+
+          <h3>Racketsporten en rotatiesporten</h3>
+          <p>
+            Tennis, hockey, golf - sporten met veel rotatie stellen hoge eisen aan de mobiliteit
+            van de wervelkolom. Blokkades of standsafwijkingen beperken de rotatiemogelijkheid,
+            wat leidt tot compensaties. Dit resulteert vaak in rug-, schouder- of elleboogklachten.
+          </p>
+
+          <h2>Combinatie met sportfysiotherapie</h2>
+          <p>
+            De Methode de Haas is geen vervanging van sportfysiotherapie, maar een aanvulling.
+            Wij zorgen voor de structurele basis - de juiste uitlijning van botstructuren. De
+            sportfysiotherapeut bouwt daarop verder met spierversterking, mobiliteitsoefeingen
+            en sportspecifieke training.
+          </p>
+          <p>
+            De ideale aanpak combineert beide: eerst herstel van de structuur via re-alignment,
+            dan opbouw van kracht en functie via fysiotherapie. Veel sporters ervaren dat
+            fysiotherapie beter werkt wanneer de onderliggende structuur op orde is.
+          </p>
+
+          <h2>Terugkeer naar sport</h2>
+          <p>
+            Na behandeling is het belangrijk om geleidelijk terug te keren naar sport. Ook al voelt
+            u zich beter, uw lichaam heeft tijd nodig om te wennen aan de nieuwe, correcte uitlijning.
+            Spieren moeten zich aanpassen, bewegingspatronen moeten zich ontwikkelen.
+          </p>
+          <p>
+            We geven adviezen over een verantwoorde opbouw. Start met lagere intensiteit en volume,
+            bouw geleidelijk op, en luister naar uw lichaam. Met geduld en de juiste opbouw kunt u
+            meestal sterker terugkeren dan voorheen - nu met een structureel gezonde basis.
+          </p>
+
+          <h2>Prestatieverbetering door optimale uitlijning</h2>
+          <p>
+            Een mooi bijeffect van structureel herstel: veel sporters presteren beter na behandeling.
+            Dit is logisch - wanneer uw lichaam symmetrisch beweegt, zonder compensaties, is de
+            beweging efficiënter. U verspilt minder energie aan het corrigeren van asymmetrieën.
+            Mobiliteit verbetert. Kracht kan optimaler ingezet worden.
+          </p>
+          <p>
+            We behandelen niet alleen blessures, maar helpen sporters om hun potentieel te bereiken
+            door optimale structurele voorwaarden te creëren.
+          </p>
+
+          <h2>Wanneer naar de praktijk komen?</h2>
+          <p>
+            Heeft u een sportblessure die maar niet overgaat? Krijgt u steeds dezelfde blessure?
+            Voelt uw lichaam asymmetrisch tijdens het sporten? Of wilt u preventief uw lichaam laten
+            controleren om blessures te voorkomen? Dan kan een onderzoek bij de Methode de Haas zinvol zijn.
+          </p>
+          <p>
+            We kijken naar de structurele basis van uw lichaam en helpen u om blessurevrij en optimaal
+            te sporten. Bel gerust voor een afspraak op <strong>079 323 7900</strong>. Of u nu
+            recreatief sport of topsporter bent - wij helpen u graag verder.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Veelgestelde Vragen</h2>
+
+        <div class="space-y-4">
+          {faqs.map((faq) => (
+            <details class="bg-white rounded-xl shadow-sm group">
+              <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                <span class="font-semibold text-gray-900 pr-4">{faq.vraag}</span>
+                <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="px-6 pb-6 text-gray-600">
+                {faq.antwoord}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gerelateerde Artikelen -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Gerelateerde Artikelen</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {gerelateerd.map((artikel) => (
+            <a
+              href={artikel.href}
+              class="card p-5 group flex items-center justify-between"
+            >
+              <span class="font-medium text-gray-900 group-hover:text-emerald-600 transition-colors">
+                {artikel.titel}
+              </span>
+              <svg class="w-5 h-5 text-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-gradient-dark text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">
+          Klaar om blessurevrij te sporten?
+        </h2>
+        <p class="text-emerald-100 text-lg mb-8">
+          Neem contact met ons op. We helpen u herstellen en toekomstige blessures voorkomen.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/contact" class="btn bg-white text-emerald-700 hover:bg-gray-100 px-8 py-4 text-base font-semibold">
+            Maak een Afspraak
+          </a>
+          <a href="tel:+31793237900" class="btn border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-base">
+            <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            079 323 7900
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

@@ -1,0 +1,180 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  keywords?: string[];
+  image?: string;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  schema?: object;
+}
+
+const {
+  title,
+  description = 'Methode de Haas - Unieke manuele therapie ontwikkeld door Wil de Haas. Precisie, mildheid en doeltreffendheid voor rug-, nek- en gewrichtsklachten.',
+  keywords = ['methode de haas', 'wil de haas', 'manuele therapie', 'pijnacker', 'rugklachten', 'nekklachten'],
+  image = '/images/og-image.svg',
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  author = 'Methode de Haas',
+  schema
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const fullTitle = title === 'Home' ? 'Methode de Haas - Manuele Therapie Zoetermeer' : `${title} | Methode de Haas`;
+
+// Organization Schema
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": ["MedicalBusiness", "PhysicalTherapy", "HealthAndBeautyBusiness"],
+  "@id": "https://methodedehaas.nl/#organization",
+  "name": "Methode de Haas",
+  "alternateName": "Methode de Haas - Gezondheidscentrum Corporalis Zoetermeer",
+  "url": "https://methodedehaas.nl",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://methodedehaas.nl/images/logo.svg"
+  },
+  "image": "https://methodedehaas.nl/images/wil-de-haas.jpg",
+  "description": "Methode de Haas is een unieke vorm van manuele therapie, ontwikkeld door Wil de Haas gedurende meer dan 50 jaar praktijkervaring. De methode wordt voortgezet door Erik Berkelaar en Marieke Bezuijen in Gezondheidscentrum Corporalis te Zoetermeer.",
+  "founder": {
+    "@type": "Person",
+    "name": "Wil de Haas",
+    "jobTitle": "Grondlegger Methode de Haas",
+    "description": "Pionier binnen de manuele therapie met meer dan 50 jaar ervaring"
+  },
+  "employee": [
+    {
+      "@type": "Person",
+      "name": "Erik Berkelaar",
+      "jobTitle": "Manueel Therapeut - Methode de Haas"
+    },
+    {
+      "@type": "Person",
+      "name": "Marieke Bezuijen",
+      "jobTitle": "Manueel Therapeut - Methode de Haas"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Dorpsstraat 182B, C en D",
+    "addressLocality": "Zoetermeer",
+    "postalCode": "2712 AR",
+    "addressCountry": "NL"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.0571,
+    "longitude": 4.4936
+  },
+  "telephone": "+31793237900",
+  "email": "info@methodedehaas.nl",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ],
+  "priceRange": "€€",
+  "paymentAccepted": ["Cash", "Bank Transfer"],
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 52.0571,
+      "longitude": 4.4936
+    },
+    "geoRadius": "30000"
+  },
+  "sameAs": []
+};
+
+// Website Schema
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://methodedehaas.nl/#website",
+  "url": "https://methodedehaas.nl",
+  "name": "Methode de Haas",
+  "description": description,
+  "publisher": {
+    "@id": "https://methodedehaas.nl/#organization"
+  },
+  "inLanguage": "nl-NL"
+};
+
+// Combine schemas
+const allSchemas = [organizationSchema, websiteSchema];
+if (schema) {
+  allSchemas.push(schema as object);
+}
+---
+
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Primary Meta Tags -->
+    <title>{fullTitle}</title>
+    <meta name="title" content={fullTitle} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords.join(', ')} />
+    <meta name="author" content={author} />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Dutch" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:locale" content="nl_NL" />
+    <meta property="og:site_name" content="Methode de Haas" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={fullTitle} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.site)} />
+
+    <!-- Article specific -->
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    {type === 'article' && <meta property="article:author" content={author} />}
+
+    <!-- Geo tags for local SEO -->
+    <meta name="geo.region" content="NL-ZH" />
+    <meta name="geo.placename" content="Zoetermeer" />
+    <meta name="geo.position" content="52.0571;4.4936" />
+    <meta name="ICBM" content="52.0571, 4.4936" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(allSchemas)} />
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body class="min-h-screen bg-white text-gray-900 antialiased">
+    <slot name="header" />
+    <main>
+      <slot />
+    </main>
+    <slot name="footer" />
+  </body>
+</html>

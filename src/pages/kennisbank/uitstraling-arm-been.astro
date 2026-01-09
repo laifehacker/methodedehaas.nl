@@ -1,0 +1,332 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+const faqs = [
+  {
+    vraag: 'Wat is het verschil tussen uitstraling en lokale pijn?',
+    antwoord: 'Lokale pijn blijft op één plek - bijvoorbeeld alleen in de nek of onderrug. Uitstralende pijn volgt het verloop van een zenuw naar arm of been. Het voelt vaak aan als een scherpe, brandende of tintelende pijn die een specifiek traject volgt. Uitstraling wijst erop dat een zenuw geïrriteerd of bekneld raakt, meestal door druk vanuit een standsafwijking in de wervelkolom.'
+  },
+  {
+    vraag: 'Is een hernia altijd de oorzaak van uitstralende pijn?',
+    antwoord: 'Nee, niet altijd. Hoewel een hernia uitstralende pijn kan veroorzaken, zijn er veel andere oorzaken: een gedraaide of verschoven wervel kan direct op een zenuw drukken, vernauwing van de tussenwervelgaten, of spierspanning die een zenuw beknelt. Bij ons onderzoek kijken we naar de exacte stand van de wervels en lokaliseren we waar de zenuwknelling ontstaat.'
+  },
+  {
+    vraag: 'Kan uitstralende pijn zonder operatie verholpen worden?',
+    antwoord: 'In veel gevallen wel. Door de wervels terug te brengen in hun natuurlijke positie wordt de druk op de zenuw verminderd. De zenuw krijgt weer ruimte en kan herstellen. Veel patiënten die een operatie overwogen, vinden verlichting door re-alignment van de wervelkolom. Natuurlijk hangt dit af van de specifieke situatie - in ernstige gevallen kan een operatie noodzakelijk zijn.'
+  },
+];
+
+const gerelateerd = [
+  { titel: 'Rugklachten Behandeling', href: '/kennisbank/rugklachten-behandeling' },
+  { titel: 'Nekklachten Behandeling', href: '/kennisbank/nekklachten-behandeling' },
+  { titel: 'De Wervelkolom', href: '/kennisbank/wervelkolom-uitleg' },
+  { titel: 'Het Zenuwstelsel', href: '/kennisbank/zenuwstelsel-uitleg' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Uitstralende Pijn Behandeling - Methode de Haas",
+  "description": "Behandeling van uitstralende pijn naar arm of been, ischias en zenuwpijn met de Methode de Haas. Ontdek hoe wervelkolomafwijkingen zenuwen kunnen beklemmen.",
+  "medicalAudience": "Patient",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Uitstralende pijn"
+  }
+};
+---
+
+<Layout
+  title="Uitstralende Pijn naar Arm of Been"
+  description="Behandeling van uitstralende pijn, ischias en zenuwpijn met de Methode de Haas. Herstel van de wervelkolom voor verlichting van zenuwpijn."
+  keywords={['uitstralende pijn', 'ischias', 'zenuwpijn', 'uitstraling arm', 'uitstraling been', 'zenuwbeknelling', 'hernia']}
+  schema={schema}
+>
+  <Navbar slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-16 lg:py-24 bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <a href="/kennisbank" class="inline-flex items-center text-emerald-600 hover:text-emerald-700 mb-6 group">
+          <svg class="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Terug naar kennisbank
+        </a>
+
+        <span class="badge badge-emerald mb-4">Behandelbare Klachten</span>
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          Uitstralende Pijn naar Arm of Been
+        </h1>
+        <p class="text-xl text-gray-600">
+          Pijn die uitstraalt naar uw arm of been? Ontdek hoe standsafwijkingen in de wervelkolom
+          zenuwen kunnen beklemmen en wat we eraan kunnen doen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="prose prose-lg mx-auto">
+          <h2>Wat is uitstralende pijn?</h2>
+          <p>
+            <strong>Uitstralende pijn</strong> is pijn die niet lokaal blijft, maar een traject volgt
+            naar arm of been. Deze pijn volgt vaak precies het verloop van een zenuw. In de onderrug
+            spreken we van <strong>ischias</strong> wanneer de pijn uitstraalt naar het been. Bij de
+            nek kan pijn uitstralen naar schouder, arm en soms tot in de vingers.
+          </p>
+          <p>
+            De oorzaak ligt bijna altijd in de wervelkolom. Wanneer een wervel uit positie staat, kan
+            deze direct of indirect druk uitoefenen op een zenuw. Die zenuw raakt geïrriteerd en geeft
+            een pijnsignaal door langs zijn hele verloop. Het resultaat: pijn die uitstraalt van rug
+            naar been of van nek naar arm.
+          </p>
+
+          <h2>Hoe ontstaat zenuwbeknelling?</h2>
+          <p>
+            Tussen elke wervel lopen zenuwen uit het ruggenmerg naar de rest van het lichaam. Deze
+            zenuwen verlaten de wervelkolom door kleine openingen - de zogenaamde foramina of
+            tussenwervelgaten. Deze ruimte is normaal gesproken ruim genoeg voor de zenuw.
+          </p>
+          <p>
+            Maar wanneer een wervel draait, verschuift of kantelt, verandert de ruimte in het
+            tussenwervelgat. De zenuw krijgt minder ruimte en raakt bekneld. Dit kan ook gebeuren
+            door een hernia - een uitstulping van tussenwervelschijf materiaal - maar vaak is de
+            oorzaak eenvoudiger: een standsafwijking van de wervel zelf.
+          </p>
+
+          <h2>Symptomen van zenuwpijn</h2>
+          <p>
+            Zenuwpijn heeft specifieke kenmerken die het onderscheiden van andere vormen van pijn:
+          </p>
+          <ul>
+            <li><strong>Scherpe, schietende pijn:</strong> Vaak beschreven als elektrisch, brandend of stekend</li>
+            <li><strong>Specifiek traject:</strong> Volgt het verloop van een zenuw (bijvoorbeeld achterkant been bij ischias)</li>
+            <li><strong>Tintelingen:</strong> Prikkeling of 'naalden en spelden' gevoel</li>
+            <li><strong>Gevoelsverlies:</strong> Verminderd gevoel in het verzorgingsgebied van de zenuw</li>
+            <li><strong>Zwakte:</strong> Verminderde kracht in arm of been</li>
+            <li><strong>Verergering bij bepaalde houdingen:</strong> Vaak erger bij zitten, buigen of draaien</li>
+          </ul>
+
+          <h2>Ischias: uitstraling naar het been</h2>
+          <p>
+            Ischias is de bekendste vorm van uitstralende pijn. De pijn begint in de onderrug en
+            straalt uit via de bil naar het been, soms helemaal tot in de voet. De oorzaak ligt in
+            de onderste lendenwervels (L4, L5) of het heiligbeen (S1), waar de dikke ischias-zenuw
+            zijn oorsprong vindt.
+          </p>
+          <p>
+            Wanneer een van deze wervels uit positie staat - gedraaid, verschoven of gekanteld -
+            komt de bijbehorende zenuwwortel onder druk. De zenuw reageert met een pijnsignaal dat
+            het hele traject volgt. Afhankelijk van welke wervel het betreft, is de uitstraling
+            anders: naar de achterkant van het been, de zijkant, of de voorkant.
+          </p>
+
+          <h2>Uitstraling naar de arm</h2>
+          <p>
+            Uitstraling naar de arm ontstaat door problemen in de nekwervels. De zenuwen die de arm
+            verzorgen komen uit de onderste nekwervels (C5-C8). Wanneer deze wervels uit positie
+            staan, kunnen de zenuwen bekneld raken.
+          </p>
+          <p>
+            De pijn begint vaak in de nek of tussen de schouderbladen, en straalt uit naar schouder,
+            arm en hand. Welk deel van de arm pijn doet, hangt af van welke zenuw bekneld raakt.
+            Soms gaat het gepaard met tintelingen in specifieke vingers of krachtsverlies in de hand.
+          </p>
+
+          <h2>De Methode de Haas aanpak voor uitstralende pijn</h2>
+          <p>
+            Bij de Methode de Haas behandelen we uitstralende pijn door de oorzaak aan te pakken:
+            we herstellen de natuurlijke stand van de wervels. Wanneer de wervel weer in zijn juiste
+            positie staat, krijgt de zenuw weer ruimte. De druk verdwijnt en de zenuw kan herstellen.
+          </p>
+          <p>
+            Tijdens het onderzoek lokaliseren we precies welke wervel uit positie staat en welke
+            zenuw bekneld raakt. We testen de mobiliteit van de wervels, controleren de stand van
+            het bekken (bij ischias), en onderzoeken de neurologische functie. Dit geeft ons een
+            exacte diagnose: welke structuur veroorzaakt de zenuwbeknelling?
+          </p>
+
+          <h3>Re-alignment voor zenuwontlasting</h3>
+          <p>
+            De behandeling bestaat uit het millimeter-nauwkeurig terugbrengen van de wervel in zijn
+            natuurlijke positie. Dit vraagt om extreme precisie - een millimeter kan het verschil
+            maken tussen wel of geen druk op de zenuw. We werken met milde, gerichte druk. Geen
+            forceren, maar nauwkeurig positioneren.
+          </p>
+          <p>
+            Wanneer de wervel weer correct staat, vergroot het tussenwervelgat direct. De zenuw
+            krijgt meer ruimte, de druk neemt af. Vaak merken patiënten al tijdens of direct na de
+            behandeling dat de uitstralende pijn vermindert. De zenuw kan beginnen met herstellen.
+          </p>
+
+          <h2>Het herstelproces van een zenuw</h2>
+          <p>
+            Een zenuw die langdurig onder druk heeft gestaan, heeft tijd nodig om te herstellen.
+            Ook al is de mechanische druk verdwenen, de zenuw moet zich herstellen van de irritatie.
+            Dit is vergelijkbaar met een slapende arm - ook nadat u uw arm weer beweegt, duurt het
+            even voordat het tintelende gevoel verdwijnt.
+          </p>
+          <p>
+            Bij lichte gevallen van zenuwbeknelling kan het herstel snel gaan - enkele dagen tot
+            weken. Bij langdurige of ernstige beknelling kan het langer duren. Soms zijn meerdere
+            behandelingen nodig om de wervels stabiel in de juiste positie te houden, vooral als
+            er ook spierspanning of andere compensaties zijn ontstaan.
+          </p>
+
+          <blockquote>
+            "Ik had maanden last van ischias. Pijn die uitstraalde tot in mijn voet. Lopen ging
+            moeizaam. Na de eerste behandeling was de pijn in mijn voet al weg. Na vier behandelingen
+            was ook de pijn in mijn been verdwenen. Ik had een operatie willen vermijden en dat is gelukt."
+          </blockquote>
+
+          <h2>Wanneer is een operatie noodzakelijk?</h2>
+          <p>
+            In de meeste gevallen van uitstralende pijn is een operatie niet noodzakelijk. Door
+            re-alignment kunnen we de druk op de zenuw wegnemen zonder chirurgische ingreep. Veel
+            patiënten die een operatie overwogen, vinden verlichting door onze behandeling.
+          </p>
+          <p>
+            Er zijn echter situaties waarin een operatie wel noodzakelijk is: bij ernstige
+            neurologische uitval (bijvoorbeeld voetdrop), bij toenemende zwakte in arm of been, of
+            bij cauda equina syndroom (een acute noodsituatie). In zulke gevallen verwijzen we door
+            naar de juiste medische specialisten.
+          </p>
+
+          <h2>Het verschil met een hernia</h2>
+          <p>
+            Veel mensen denken bij uitstralende pijn direct aan een hernia. En ja, een hernia kan
+            inderdaad zenuwpijn veroorzaken. Maar niet alle uitstralende pijn komt door een hernia.
+            Vaak is de oorzaak een standsafwijking van een wervel die direct op de zenuw drukt.
+          </p>
+          <p>
+            Het interessante is: ook bij een hernia helpt re-alignment vaak. Door de wervel in de
+            juiste positie te brengen, creëren we meer ruimte in het tussenwervelgat. Hierdoor heeft
+            de zenuw meer ruimte, ook al is er een hernia aanwezig. De druk neemt af en de pijn
+            vermindert.
+          </p>
+
+          <h2>Preventie van zenuwbeknelling</h2>
+          <p>
+            Nadat we de wervels hebben gecorrigeerd en de zenuwpijn is verminderd, is het belangrijk
+            om herhaling te voorkomen. We geven adviezen over houding, bewegen en tillen. Bepaalde
+            bewegingen of houdingen kunnen de wervels weer uit positie duwen.
+          </p>
+          <p>
+            Ook kernstabiliteit speelt een rol. Sterke buik- en rugspieren helpen om de wervels in
+            hun juiste positie te houden. We adviseren over gerichte oefeningen die u thuis kunt
+            doen om uw rug of nek te versterken en stabiel te houden.
+          </p>
+
+          <h2>Verschillende patronen van uitstraling</h2>
+          <p>
+            Elke zenuw heeft een specifiek verzorgingsgebied. Door het patroon van uw uitstralende
+            pijn te analyseren, kunnen we vaak al voorspellen welke wervel en welke zenuw het betreft:
+          </p>
+          <ul>
+            <li><strong>L4:</strong> Uitstraling naar voorkant bovenbeen en binnenkant onderbeen</li>
+            <li><strong>L5:</strong> Uitstraling naar zijkant been en bovenkant voet</li>
+            <li><strong>S1:</strong> Uitstraling naar achterkant been en onderkant voet</li>
+            <li><strong>C6:</strong> Uitstraling naar duim en wijsvinger</li>
+            <li><strong>C7:</strong> Uitstraling naar middelvinger</li>
+            <li><strong>C8:</strong> Uitstraling naar pink en ringvinger</li>
+          </ul>
+
+          <h2>Wanneer naar de praktijk komen?</h2>
+          <p>
+            Heeft u pijn die uitstraalt naar arm of been? Voelt u tintelingen of krachtsverlies?
+            Dan is het verstandig om niet te lang te wachten. Hoe langer een zenuw onder druk staat,
+            hoe meer schade kan ontstaan en hoe langer het herstel duurt.
+          </p>
+          <p>
+            Bij de Methode de Haas onderzoeken we de exacte oorzaak van uw uitstralende pijn en
+            behandelen we deze bij de bron. Bel gerust voor een afspraak op <strong>079 323 7900</strong>.
+            We helpen u graag verder met uw zenuwpijn.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Veelgestelde Vragen</h2>
+
+        <div class="space-y-4">
+          {faqs.map((faq) => (
+            <details class="bg-white rounded-xl shadow-sm group">
+              <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                <span class="font-semibold text-gray-900 pr-4">{faq.vraag}</span>
+                <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="px-6 pb-6 text-gray-600">
+                {faq.antwoord}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gerelateerde Artikelen -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Gerelateerde Artikelen</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {gerelateerd.map((artikel) => (
+            <a
+              href={artikel.href}
+              class="card p-5 group flex items-center justify-between"
+            >
+              <span class="font-medium text-gray-900 group-hover:text-emerald-600 transition-colors">
+                {artikel.titel}
+              </span>
+              <svg class="w-5 h-5 text-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-gradient-dark text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">
+          Wilt u van uw uitstralende pijn af?
+        </h2>
+        <p class="text-emerald-100 text-lg mb-8">
+          Neem contact met ons op voor een afspraak. We onderzoeken de oorzaak van uw zenuwpijn.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/contact" class="btn bg-white text-emerald-700 hover:bg-gray-100 px-8 py-4 text-base font-semibold">
+            Maak een Afspraak
+          </a>
+          <a href="tel:+31793237900" class="btn border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-base">
+            <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            079 323 7900
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

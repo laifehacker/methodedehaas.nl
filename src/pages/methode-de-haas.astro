@@ -1,0 +1,264 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const kenmerken = [
+  { titel: 'Precisie', beschrijving: 'Millimeter-nauwkeurige correctie van standsafwijkingen in wervels, gewrichten en bekken.' },
+  { titel: 'Mildheid', beschrijving: 'Geen brute kracht, maar doelgerichte druk. Respectvol voor het lichaam.' },
+  { titel: 'Holistische Benadering', beschrijving: 'Het hele lichaam wordt bekeken als samenhangend systeem, niet alleen de klacht.' },
+  { titel: 'Ervaring', beschrijving: 'Meer dan 50 jaar verfijning door duizenden behandelingen.' },
+  { titel: 'Persoonlijke Overdracht', beschrijving: 'Kennis direct doorgegeven van meester op leerling.' },
+  { titel: 'Natuurlijk Herstel', beschrijving: 'Creeert ruimte voor het lichaam om zelf te herstellen.' },
+];
+
+const faqs = [
+  {
+    vraag: 'Wat is het verschil tussen Methode de Haas en reguliere manuele therapie?',
+    antwoord: 'De Methode de Haas onderscheidt zich door de extreme precisie en mildheid van de behandeling. Waar reguliere manuele therapie vaak werkt met mobilisaties en manipulaties, richt de Methode de Haas zich op het exact herstellen van de natuurlijke stand van botstructuren. De techniek is verfijnd over 50+ jaar praktijkervaring.'
+  },
+  {
+    vraag: 'Doet de behandeling pijn?',
+    antwoord: 'De behandeling is mild en respectvol voor het lichaam. Het principe is "niet door kracht, maar door precisie". De meeste patiënten ervaren de behandeling als aangenaam. Soms kan er na de behandeling tijdelijk wat spierpijn optreden, vergelijkbaar met na het sporten.'
+  },
+  {
+    vraag: 'Hoeveel behandelingen zijn er nodig?',
+    antwoord: 'Dit varieert per persoon en klacht. Sommige patiënten merken al na 1-3 behandelingen verbetering. Voor langdurige of complexe klachten kunnen meer sessies nodig zijn. Tijdens de intake bespreken we wat u kunt verwachten.'
+  },
+  {
+    vraag: 'Wordt de behandeling vergoed?',
+    antwoord: 'De Methode de Haas valt onder alternatieve geneeswijzen. Vergoeding hangt af van uw aanvullende verzekering. Wij adviseren u om vooraf bij uw zorgverzekeraar te informeren naar de vergoedingsmogelijkheden.'
+  },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalTherapy",
+  "name": "Methode de Haas",
+  "alternateName": "De Haas Method",
+  "description": "De Methode de Haas is een unieke vorm van manuele therapie die zich richt op het nauwkeurig herstellen van de natuurlijke stand van wervels, gewrichten en het bekken.",
+  "medicalSpecialty": "Musculoskeletal Medicine",
+  "relevantSpecialty": {
+    "@type": "MedicalSpecialty",
+    "name": "Manual Therapy"
+  }
+};
+---
+
+<Layout
+  title="De Methode"
+  description="Ontdek de Methode de Haas - een unieke vorm van manuele therapie ontwikkeld door Wil de Haas. Precisie, mildheid en doeltreffendheid voor rug-, nek- en gewrichtsklachten."
+  keywords={['methode de haas', 'manuele therapie', 'behandelmethode', 're-alignment', 'wervelkolom', 'bekken']}
+  schema={schema}
+>
+  <Navbar slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-20 lg:py-32 bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="badge badge-emerald mb-4">De Behandelmethode</span>
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          De Methode de Haas
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Een unieke vorm van manuele therapie die zich richt op het nauwkeurig herstellen
+          van de natuurlijke stand van wervels, gewrichten en het bekken.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introductie -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="prose prose-lg mx-auto">
+          <h2>Wat is de Methode de Haas?</h2>
+          <p>
+            <strong>De Methode de Haas</strong> is het resultaat van meer dan vijftig jaar onderzoek en praktijkervaring
+            van Wil de Haas. Het is een unieke behandelmethode die zich onderscheidt door extreme precisie en mildheid.
+          </p>
+          <p>
+            De kernvraag die Wil de Haas zijn hele carrière heeft gedreven: <em>wat gebeurt er wanneer
+            botstructuren weer exact in hun natuurlijke stand worden gebracht?</em>
+          </p>
+          <p>
+            Het antwoord bleek verrassend eenvoudig maar diepgaand: wanneer wervels, gewrichten en het bekken
+            weer in hun natuurlijke positie staan, vermindert de spanning in het zenuwstelsel, herstelt de
+            balans in het lichaam en ontstaat er ruimte voor natuurlijk herstel.
+          </p>
+
+          <h2>Het Principe: Re-alignment</h2>
+          <p>
+            De Methode de Haas draait om <strong>re-alignment</strong> - het terugbrengen van botstructuren in
+            hun natuurlijke stand. Dit klinkt eenvoudig, maar vereist:
+          </p>
+          <ul>
+            <li>Uiterste precisie in het lokaliseren van standsafwijkingen</li>
+            <li>Diepgaand begrip van de anatomie en biomechanica</li>
+            <li>Jarenlange training om de juiste techniek te beheersen</li>
+            <li>Gevoel voor het lichaam van de patiënt</li>
+          </ul>
+          <p>
+            Het is niet de kracht die het verschil maakt, maar de nauwkeurigheid. Een millimeter kan het
+            verschil maken tussen wel of geen verlichting van klachten.
+          </p>
+
+          <h2>Niet Door Kracht, Maar Door Precisie</h2>
+          <p>
+            Dit is de filosofie die de Methode de Haas kenmerkt. Waar sommige behandelmethoden werken met
+            krachtige manipulaties, kiest de Methode de Haas voor een milde maar doeltreffende aanpak.
+          </p>
+          <p>
+            De behandeling is respectvol voor het lichaam. Er wordt niet geforceerd, maar begrepen.
+            Het lichaam wordt gezien als een samenhangend systeem waarin alles met elkaar verbonden is.
+          </p>
+
+          <blockquote>
+            "De methode herstelt balans in het lichaam, vermindert spanning in het zenuwstelsel en
+            creeert ruimte voor natuurlijk herstel."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kenmerken -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="section-title">Kenmerken van de Methode</h2>
+        <p class="section-subtitle mx-auto">
+          Wat maakt de Methode de Haas uniek?
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {kenmerken.map((kenmerk) => (
+          <div class="card p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">{kenmerk.titel}</h3>
+            <p class="text-gray-600">{kenmerk.beschrijving}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Hoe werkt het -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Hoe Werkt een Behandeling?</h2>
+
+        <div class="space-y-8">
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+              <span class="text-emerald-600 font-bold">1</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Intake en Onderzoek</h3>
+              <p class="text-gray-600">
+                We beginnen met een uitgebreid gesprek over uw klachten en medische geschiedenis.
+                Daarna volgt een lichamelijk onderzoek waarbij we nauwkeurig kijken naar de stand
+                van uw wervelkolom, bekken en gewrichten.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+              <span class="text-emerald-600 font-bold">2</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Diagnose</h3>
+              <p class="text-gray-600">
+                Op basis van het onderzoek stellen we vast welke standsafwijkingen aanwezig zijn
+                en hoe deze samenhangen met uw klachten. We bekijken het lichaam als geheel,
+                niet alleen de plek waar de pijn zit.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+              <span class="text-emerald-600 font-bold">3</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Behandeling</h3>
+              <p class="text-gray-600">
+                Met precisie en mildheid worden de standsafwijkingen gecorrigeerd. De behandeling
+                is respectvol voor het lichaam - niet door kracht, maar door nauwkeurigheid.
+                Vaak is direct na de behandeling verlichting merkbaar.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+              <span class="text-emerald-600 font-bold">4</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Nazorg en Vervolgbehandeling</h3>
+              <p class="text-gray-600">
+                Na de behandeling bespreken we wat u kunt verwachten en geven we eventueel
+                adviezen mee. Afhankelijk van uw situatie plannen we vervolgafspraken om het
+                herstel te ondersteunen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Veelgestelde Vragen</h2>
+
+        <div class="space-y-4">
+          {faqs.map((faq) => (
+            <details class="bg-white rounded-xl shadow-sm group">
+              <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                <span class="font-semibold text-gray-900 pr-4">{faq.vraag}</span>
+                <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="px-6 pb-6 text-gray-600">
+                {faq.antwoord}
+              </div>
+            </details>
+          ))}
+        </div>
+
+        <div class="text-center mt-10">
+          <a href="/veelgestelde-vragen" class="btn btn-secondary">
+            Bekijk alle veelgestelde vragen
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-gradient-dark text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">
+          Wilt u ervaren wat de Methode de Haas voor u kan betekenen?
+        </h2>
+        <p class="text-emerald-100 text-lg mb-8">
+          Neem contact met ons op voor een afspraak.
+        </p>
+        <a href="/contact" class="btn bg-white text-emerald-700 hover:bg-gray-100 px-8 py-4 text-base font-semibold">
+          Maak een Afspraak
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

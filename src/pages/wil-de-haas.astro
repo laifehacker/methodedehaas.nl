@@ -1,0 +1,233 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const tijdlijn = [
+  { jaar: '1970s', titel: 'Begin van de Reis', beschrijving: 'Wil de Haas begint zijn carrière en ontwikkelt interesse in de relatie tussen lichaamshouding en klachten.' },
+  { jaar: '1980s', titel: 'Verfijning van de Methode', beschrijving: 'Door duizenden behandelingen ontstaat een steeds preciezere techniek.' },
+  { jaar: '1990s', titel: 'Praktijk in Pijnacker', beschrijving: 'De praktijk aan Klein Vlieland wordt het centrum van de Methode de Haas.' },
+  { jaar: '2000s', titel: 'Kennisoverdracht', beschrijving: 'Wil de Haas begint zijn kennis over te dragen aan Erik Berkelaar en Marieke Bezuijen.' },
+  { jaar: 'Heden', titel: 'Erfenis Veiliggesteld', beschrijving: 'De methode wordt in Zoetermeer voortgezet door Erik Berkelaar en Marieke Bezuijen.' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Wil de Haas",
+  "alternateName": "W.H.G. de Haas",
+  "jobTitle": "Grondlegger Methode de Haas",
+  "description": "Wil de Haas is een pionier binnen de manuele therapie met meer dan 50 jaar ervaring. Hij ontwikkelde de Methode de Haas, een unieke vorm van re-alignment therapie. Zijn expertise is overgedragen aan Erik Berkelaar en Marieke Bezuijen in Zoetermeer.",
+  "knowsAbout": ["Manuele Therapie", "Re-alignment", "Wervelkolom", "Bekken"],
+};
+---
+
+<Layout
+  title="Wil de Haas"
+  description="Leer meer over Wil de Haas, de grondlegger van de Methode de Haas. Meer dan 50 jaar wijdde hij zijn leven aan de ontwikkeling van deze unieke manuele therapie. Zijn expertise is overgedragen aan Erik Berkelaar en Marieke Bezuijen in Zoetermeer."
+  keywords={['wil de haas', 'grondlegger', 'manuele therapie', 'pionier', 'levenswerk', 'erik berkelaar', 'marieke bezuijen']}
+  schema={schema}
+>
+  <Navbar slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-20 lg:py-32 bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="badge badge-emerald mb-4">De Grondlegger</span>
+          <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+            Wil de Haas
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Een pionier binnen de manuele therapie. Meer dan vijftig jaar wijdde hij zijn werk aan
+            een fundamentele vraag: wat gebeurt er wanneer botstructuren weer exact in hun
+            natuurlijke stand worden gebracht?
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <div class="flex items-center text-gray-600">
+              <svg class="w-5 h-5 text-emerald-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>50+ jaar ervaring</span>
+            </div>
+            <div class="flex items-center text-gray-600">
+              <svg class="w-5 h-5 text-emerald-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Duizenden patiënten geholpen</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="aspect-[4/5] bg-gray-100 rounded-2xl overflow-hidden">
+            <img
+              src="/images/wil-de-haas.jpg"
+              alt="Wil de Haas draagt zijn expertise over aan Erik Berkelaar en Marieke Bezuijen"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg p-4 max-w-xs">
+            <p class="text-sm text-gray-600 italic">"Expertise overdracht aan de volgende generatie"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Het Verhaal -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="prose prose-lg">
+          <h2>Het Levenswerk van Wil de Haas</h2>
+          <p>
+            Wil de Haas is een pionier binnen de manuele therapie. Meer dan vijftig jaar lang
+            wijdde hij zijn werk aan een fundamentele vraag: <em>wat gebeurt er wanneer
+            botstructuren weer exact in hun natuurlijke stand worden gebracht?</em>
+          </p>
+          <p>
+            Uit duizenden behandelingen en decennia van verfijning ontstond de Methode de Haas —
+            een unieke, precieze vorm van re-alignment waarbij wervels, gewrichten en het bekken
+            op een milde maar doeltreffende manier worden uitgelijnd.
+          </p>
+
+          <h3>Decennia van Vakmanschap</h3>
+          <p>
+            Vanuit zijn praktijk in Pijnacker heeft Wil de Haas tientallen jaren lang patiënten
+            geholpen die elders geen baat hadden gevonden. Zijn reputatie verspreidde zich via
+            mond-tot-mondreclame — mensen die eindelijk van hun klachten af waren na jarenlang zoeken.
+          </p>
+          <p>
+            De praktijk werd een plek waar precisie en zorgvuldigheid centraal staan. Elke
+            behandeling is maatwerk, elke patiënt wordt gezien als uniek individu met een
+            eigen verhaal.
+          </p>
+
+          <blockquote>
+            "Niet door kracht, maar door precisie. Niet door forceren, maar door begrijpen."
+            <cite>— Wil de Haas</cite>
+          </blockquote>
+
+          <h3>De Filosofie</h3>
+          <p>
+            De filosofie van Wil de Haas is even eenvoudig als diepgaand: het lichaam heeft
+            een natuurlijke balans, en wanneer deze verstoord raakt, ontstaan klachten. Door
+            de oorzaak van de verstoring weg te nemen — de standsafwijking — krijgt het lichaam
+            de ruimte om zelf te herstellen.
+          </p>
+          <p>
+            Dit vraagt om een andere manier van kijken naar het lichaam. Niet alleen focussen
+            op de plek waar de pijn zit, maar begrijpen hoe alles met elkaar samenhangt. Een
+            klacht in de nek kan zijn oorsprong hebben in het bekken. Hoofdpijn kan komen door
+            een wervel die niet goed staat.
+          </p>
+
+          <h3>De Erfenis — Expertise Overgedragen</h3>
+          <p>
+            Met zijn naderende terugtreden heeft Wil de Haas zijn volledige kennis en vakmanschap
+            persoonlijk overgedragen aan <strong>Erik Berkelaar</strong> en <strong>Marieke Bezuijen</strong>.
+            Zij zijn de enige therapeuten die rechtstreeks door Wil de Haas zijn opgeleid en
+            gecertificeerd om de Methode de Haas uit te voeren.
+          </p>
+          <p>
+            Erik en Marieke zetten de Methode de Haas voort vanuit <strong>Gezondheidscentrum
+            Corporalis in Zoetermeer</strong>. Zij werken vanuit dezelfde principes, dezelfde
+            precisie en hetzelfde respect voor het lichaam — met als missie het waarborgen en
+            doorontwikkelen van dit bijzondere levenswerk.
+          </p>
+          <p>
+            Zo blijft de Methode de Haas niet alleen behouden, maar ook toekomstbestendig. Het
+            tijdloze vakmanschap van Wil de Haas wordt met zorg doorgegeven aan de volgende generatie.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tijdlijn -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">De Reis van Wil de Haas</h2>
+
+        <div class="relative">
+          <!-- Vertical line -->
+          <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-emerald-200"></div>
+
+          <div class="space-y-8">
+            {tijdlijn.map((item, index) => (
+              <div class="relative flex gap-6">
+                <div class="flex-shrink-0 w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center z-10 border-4 border-white">
+                  <span class="text-emerald-600 font-bold text-xs text-center leading-tight">{item.jaar}</span>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm flex-1">
+                  <h3 class="font-semibold text-gray-900 mb-2">{item.titel}</h3>
+                  <p class="text-gray-600">{item.beschrijving}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="section bg-emerald-600 text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <svg class="w-12 h-12 mx-auto mb-6 opacity-50" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+        </svg>
+        <blockquote class="text-2xl sm:text-3xl font-medium italic mb-6">
+          "Ik ben bij 4 verschillende fysiotherapeuten geweest, chiropractors, manuele therapie,
+          acupunctuur en dry-needling. Niets komt in de buurt van wat er tijdens deze drie
+          sessies bij meneer de Haas is gebeurd."
+        </blockquote>
+        <p class="text-emerald-100">— Patient ervaring over Wil de Haas</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Info -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="section-title mb-6">De Methode Vandaag</h2>
+        <p class="text-gray-600 mb-8">
+          De Methode de Haas wordt vandaag voortgezet door Erik Berkelaar en Marieke Bezuijen
+          in Gezondheidscentrum Corporalis te Zoetermeer — de enige therapeuten die persoonlijk
+          door Wil de Haas zijn opgeleid.
+        </p>
+
+        <div class="bg-gray-50 rounded-2xl p-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-2">Adres</h3>
+              <p class="text-gray-600">
+                Gezondheidscentrum Corporalis<br />
+                Dorpsstraat 182B, C en D<br />
+                2712 AR Zoetermeer
+              </p>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-2">Contact</h3>
+              <p class="text-gray-600">
+                Telefoon: <a href="tel:+31793237900" class="text-emerald-600 hover:underline">079 323 7900</a><br />
+                Email: <a href="mailto:info@methodedehaas.nl" class="text-emerald-600 hover:underline">info@methodedehaas.nl</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <a href="/contact" class="btn btn-primary mt-8">
+          Neem Contact Op
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

@@ -1,0 +1,198 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+const publishedTime = '2026-01-09T10:00:00+01:00';
+const modifiedTime = '2026-01-09T10:00:00+01:00';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "De Geschiedenis van de Methode de Haas - 50+ Jaar Ontwikkeling",
+  "description": "Ontdek de fascinerende geschiedenis van de Methode de Haas: van de oorsprong in Pijnacker tot een gerespecteerde behandelmethode met meer dan 50 jaar ervaring.",
+  "image": "https://methodedehaas.nl/images/praktijk.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "Methode de Haas"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Methode de Haas",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://methodedehaas.nl/images/logo.png"
+    }
+  },
+  "datePublished": publishedTime,
+  "dateModified": modifiedTime,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://methodedehaas.nl/kennisbank/geschiedenis-methode-de-haas"
+  }
+};
+---
+
+<Layout
+  title="Geschiedenis van de Methode de Haas"
+  description="Ontdek de rijke geschiedenis van de Methode de Haas: van de eerste stappen van Wil de Haas tot de gevestigde praktijk in Pijnacker. Een verhaal van passie en precisie."
+  keywords={['geschiedenis', 'methode de haas', 'wil de haas', 'pijnacker', 'ontwikkeling', 'levenswerk', 'klein vlieland']}
+  type="article"
+  publishedTime={publishedTime}
+  modifiedTime={modifiedTime}
+  schema={articleSchema}
+>
+  <Navbar slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-16 lg:py-20 bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <a href="/kennisbank" class="inline-flex items-center text-emerald-600 hover:text-emerald-700 mb-4">
+          <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Terug naar Kennisbank
+        </a>
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Geschiedenis van de Methode de Haas</h1>
+        <p class="text-lg text-gray-600">Een levenswerk van meer dan 50 jaar: hoe Wil de Haas zijn unieke behandelmethode ontwikkelde en verfijnde vanuit zijn praktijk in Pijnacker.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto prose prose-lg">
+
+        <h2>De Wortels: Begin Jaren '60</h2>
+
+        <p>De geschiedenis van de Methode de Haas begint in de jaren zestig van de vorige eeuw, toen Wil de Haas zijn eerste stappen zette in de wereld van alternatieve geneeswijzen. In een tijd waarin de reguliere geneeskunde dominant was en manuele therapie nog in de kinderschoenen stond, durfde hij een eigen weg te bewandelen.</p>
+
+        <p>Wil de Haas werd aanvankelijk gefascineerd door Oosterse geneeswijzen, in het bijzonder shiatsu. Deze Japanse vorm van therapeutische massage, gebaseerd op principes van energiestromen en drukpunten, vormde de basis voor zijn verdere ontwikkeling. De filosofie achter shiatsu - dat het lichaam zelf de wijsheid heeft om te genezen als het in balans wordt gebracht - zou hem de rest van zijn carriere begeleiden.</p>
+
+        <h2>De Zoektocht naar Precisie</h2>
+
+        <p>In de eerste jaren van zijn praktijk experimenteerde Wil de Haas met verschillende technieken. Hij studeerde anatomie, bestudeerde chiropractie en manuele therapie, en leerde van verschillende meesters in binnen- en buitenland. Maar hij bleef zoeken naar iets wat ontbrak in de bestaande methodieken.</p>
+
+        <p>Wat hem stoorde in veel traditionele benaderingen was het gebruik van grove kracht. Het 'kraken' van gewrichten, het forceren van wervels in positie - het voelde voor hem niet juist. Er moest een betere weg zijn, een weg die meer in harmonie was met de natuurlijke structuren van het lichaam.</p>
+
+        <blockquote>
+          <p>"Het lichaam verzet zich tegen kracht, maar reageert op precisie."</p>
+          <footer>- Wil de Haas</footer>
+        </blockquote>
+
+        <h2>De Doorbraak: Mildheid en Effectiviteit</h2>
+
+        <p>De werkelijke doorbraak kwam in de jaren zeventig, toen Wil de Haas ontdekte dat extreme precisie belangrijker was dan kracht. Door met zijn handen de exacte positionering van wervels te voelen en met minieme, zeer gericht gerichte bewegingen te werken, kon hij resultaten bereiken die met grof geweld niet mogelijk waren.</p>
+
+        <p>Deze ontdekking leidde tot de ontwikkeling van wat later bekend zou worden als het kernprincipe van de Methode de Haas: <strong>"Niet door kracht, maar door precisie"</strong>.</p>
+
+        <p>Patienten bemerkten het verschil onmiddellijk. Waar ze bij andere therapeuten vaak gespannen en angstig waren voor pijnlijke manipulaties, konden ze bij Wil de Haas volledig ontspannen. En paradoxaal genoeg: hoe milder de behandeling, hoe effectiever de resultaten bleken te zijn.</p>
+
+        <h2>Vestiging in Pijnacker</h2>
+
+        <p>In de jaren tachtig vestigde Wil de Haas zijn praktijk definitief aan Klein Vlieland 2 in Pijnacker. Dit adres zou uitgroeien tot een begrip voor mensen met rug-, nek- en gewrichtsklachten in de hele regio Zuid-Holland en daarbuiten.</p>
+
+        <p>De praktijk, gehuisvest in een karakteristiek pand in Pijnacker, werd een plek waar mensen met vaak jarenlange klachten hun weg naartoe vonden. Mond-tot-mondreclame zorgde ervoor dat de reputatie van de Methode de Haas gestaag groeide.</p>
+
+        <h2>Continue Ontwikkeling en Verfijning</h2>
+
+        <p>Wil de Haas was nooit iemand die stil bleef staan. Gedurende de jaren tachtig, negentig en verder bleef hij zijn methode verfijnen. Elke patient was een leermogelijkheid, elke behandeling een kans om zijn technieken te verbeteren.</p>
+
+        <p>Hij ontwikkelde specifieke benaderingen voor verschillende typen klachten:</p>
+
+        <ul>
+          <li>Technieken voor acute versus chronische problematiek</li>
+          <li>Methoden voor behandeling van het bekken</li>
+          <li>Speciale aanpak voor hoofdpijn en migraine</li>
+          <li>Technieken voor sporters en sportblessures</li>
+          <li>Behandelprotocollen voor ouderen</li>
+        </ul>
+
+        <p>Elk van deze specialisaties was het resultaat van jaren ervaring en duizenden behandelingen.</p>
+
+        <h2>De Jaren 2000: Erkenning en Groei</h2>
+
+        <p>In de jaren 2000 kreeg de Methode de Haas bredere erkenning. Artsen in de regio begonnen patienten door te verwijzen, en de praktijk groeide. Toch bleef Wil de Haas trouw aan zijn principes: kwaliteit boven kwantiteit, persoonlijke aandacht voor elke patient, en voortdurende verbetering van zijn technieken.</p>
+
+        <p>In deze periode begon hij ook na te denken over de toekomst. Na decennia van praktijk was hij in de zestig en de vraag van continuiteit werd belangrijker. Hoe kon hij ervoor zorgen dat zijn kennis en ervaring niet verloren zou gaan?</p>
+
+        <h2>Kennisoverdracht: Marieke Bezuijen en Erik Berkelaar</h2>
+
+        <p>De oplossing kwam in de vorm van twee getalenteerde therapeuten: Marieke Bezuijen en Erik Berkelaar. Beiden hadden al een achtergrond in manuele therapie, maar waren gefascineerd door de unieke aanpak van Wil de Haas.</p>
+
+        <p>Wat volgde was geen korte cursus of spoedopleiding, maar een jarenlang proces van intensieve mentoring. Wil de Haas nam de tijd om zijn kennis over te dragen, niet alleen de fysieke technieken maar ook de filosofie erachter, het vermogen om met de handen te 'luisteren' naar het lichaam, en de wijsheid die komt met decennia ervaring.</p>
+
+        <p>Marieke en Erik leerden door te observeren, te assisteren bij behandelingen, en onder nauwlettend toezicht zelf te behandelen. Dit proces duurde jaren, omdat Wil de Haas niet wilde dat zijn methode zou verworden tot een oppervlakkige techniek. Hij wilde de essentie doorgeven.</p>
+
+        <h2>De Praktijk Vandaag: Zoetermeer</h2>
+
+        <p>Vandaag de dag wordt de Methode de Haas voortgezet door Erik Berkelaar en Marieke Bezuijen vanuit Gezondheidscentrum Corporalis in Zoetermeer. Ze zijn de enige therapeuten die rechtstreeks door Wil de Haas zijn opgeleid en handhaven dezelfde hoge standaarden en filosofie.</p>
+
+        <p>Patienten die al decennia bij de praktijk komen, merken dat de kwaliteit van behandeling behouden is gebleven. Nieuwe patienten ervaren dezelfde milde maar effectieve aanpak die de Methode de Haas kenmerkt.</p>
+
+        <h2>Een Levenswerk Voortgezet</h2>
+
+        <p>De geschiedenis van de Methode de Haas is meer dan een chronologie van gebeurtenissen - het is het verhaal van een levenswerk. Een verhaal van iemand die durfde af te wijken van geaccepteerde normen, die de moed had om zijn eigen weg te gaan, en de toewijding had om gedurende meer dan 50 jaar onvermoeibaar te blijven leren en verbeteren.</p>
+
+        <p>Het resultaat is een behandelmethode die uniek is in Nederland: bewezen effectief door duizenden behandelde patienten, gebaseerd op solide anatomische kennis, uitgevoerd met extreme precisie en mildheid, en nu veiliggesteld voor toekomstige generaties.</p>
+
+        <blockquote>
+          <p>"Wil de Haas heeft niet alleen een behandelmethode ontwikkeld, hij heeft een filosofie gecreeerd over hoe je met het menselijk lichaam kunt werken met respect en precisie."</p>
+          <footer>- Marieke Bezuijen, opvolger van Wil de Haas</footer>
+        </blockquote>
+
+        <h2>De Erfenis</h2>
+
+        <p>De erfenis van Wil de Haas is veelzijdig:</p>
+
+        <ul>
+          <li><strong>Duizenden patienten</strong> die dankzij zijn behandelingen verlost werden van klachten</li>
+          <li><strong>Een unieke methode</strong> die anders is dan alle andere vormen van manuele therapie</li>
+          <li><strong>Een filosofie</strong> van precisie boven kracht die andere therapeuten heeft geinspireerd</li>
+          <li><strong>Een praktijk</strong> in Zoetermeer die als een baken fungeert voor mensen met klachten</li>
+          <li><strong>Opvolgers</strong> die zijn kennis en waarden voortzetten</li>
+        </ul>
+
+        <h2>Belangrijke Mijlpalen</h2>
+
+        <p>Samenvattend zijn dit de belangrijkste mijlpalen in de geschiedenis van de Methode de Haas:</p>
+
+        <ul>
+          <li><strong>Jaren '60:</strong> Wil de Haas begint zijn zoektocht, studeert shiatsu en Oosterse geneeswijzen</li>
+          <li><strong>Jaren '70:</strong> Doorbraak met de ontdekking van precisie boven kracht</li>
+          <li><strong>Jaren '80:</strong> Vestiging van de praktijk aan Klein Vlieland 2, Pijnacker</li>
+          <li><strong>Jaren '90:</strong> Verdere verfijning van technieken, groeiende reputatie</li>
+          <li><strong>Jaren 2000:</strong> Bredere erkenning, begin van kennisoverdracht</li>
+          <li><strong>2010+:</strong> Erik Berkelaar en Marieke Bezuijen nemen de kennis over</li>
+          <li><strong>Heden:</strong> Voortgezette praktijk in Zoetermeer met behoud van oorspronkelijke principes</li>
+        </ul>
+
+        <h2>Meer Leren Over de Methode?</h2>
+
+        <p>Geinteresseerd in meer aspecten van de Methode de Haas? Lees ook:</p>
+
+        <ul>
+          <li><a href="/kennisbank/wat-is-methode-de-haas">Wat is de Methode de Haas?</a> - Uitgebreide uitleg over de methode</li>
+          <li><a href="/kennisbank/hoe-werkt-methode-de-haas">Hoe werkt de Methode de Haas?</a> - Technische uitleg</li>
+          <li><a href="/kennisbank/wetenschappelijke-basis-methode-de-haas">Wetenschappelijke basis</a> - De wetenschap achter de methode</li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Ervaar een Methode met 50+ Jaar Ontwikkeling</h2>
+        <p class="text-gray-600 mb-6">Profiteer van de jarenlange ervaring en verfijnde technieken van de Methode de Haas. Maak een afspraak in onze praktijk in Zoetermeer.</p>
+        <a href="/contact" class="btn btn-primary">Maak een Afspraak</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

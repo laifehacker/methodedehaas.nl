@@ -1,0 +1,472 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+const stappen = [
+  {
+    nummer: '1',
+    titel: 'Controleer uw Polis',
+    beschrijving: 'Bekijk welke aanvullende verzekering u heeft en hoeveel wordt vergoed voor alternatieve geneeswijzen.'
+  },
+  {
+    nummer: '2',
+    titel: 'Bel uw Verzekeraar',
+    beschrijving: 'Informeer specifiek naar vergoeding voor de Methode de Haas of manuele therapie bij alternatieve behandelaars.'
+  },
+  {
+    nummer: '3',
+    titel: 'Noteer de Voorwaarden',
+    beschrijving: 'Vraag naar maximale vergoeding per behandeling, aantal behandelingen per jaar, en of verwijzing nodig is.'
+  },
+  {
+    nummer: '4',
+    titel: 'Ontvang Behandeling',
+    beschrijving: 'Na elke behandeling ontvangt u van ons een correcte factuur die voldoet aan alle eisen van zorgverzekeraars.'
+  },
+  {
+    nummer: '5',
+    titel: 'Dien Declaratie In',
+    beschrijving: 'Stuur de factuur naar uw zorgverzekeraar. Dit kan vaak digitaal via de app of website van uw verzekeraar.'
+  },
+  {
+    nummer: '6',
+    titel: 'Ontvang Vergoeding',
+    beschrijving: 'De verzekeraar keert het vergoed bedrag uit volgens uw polisvoorwaarden, meestal binnen enkele weken.'
+  },
+];
+
+const tips = [
+  'Controleer jaarlijks of uw aanvullende verzekering nog optimaal is voor uw situatie',
+  'Bewaar alle facturen en declaraties goed voor uw administratie',
+  'Let op het maximum aantal behandelingen per kalenderjaar',
+  'Sommige verzekeraars vereisen voorafgaande goedkeuring - check dit vooraf',
+  'Bij twijfel: vraag uw verzekeraar om een schriftelijke bevestiging',
+  'Verzamel eventuele verwijsbrieven of medische informatie die nuttig kan zijn'
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Vergoeding door Zorgverzekering - Methode de Haas",
+  "description": "Alles over de vergoeding van behandelingen bij de Methode de Haas door uw zorgverzekering. Hoe declareren en wat wordt vergoed?",
+  "author": {
+    "@type": "Organization",
+    "name": "Methode de Haas"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage"
+  }
+};
+---
+
+<Layout
+  title="Vergoeding door Zorgverzekering"
+  description="Alles over de vergoeding van behandelingen bij de Methode de Haas door uw zorgverzekering. Hoe declareren en wat wordt vergoed?"
+  keywords={['vergoeding', 'zorgverzekering', 'aanvullende verzekering', 'declaratie', 'alternatieve geneeswijzen', 'kosten']}
+  schema={schema}
+>
+  <Navbar slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-16 lg:py-24 bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="badge badge-emerald mb-4">Praktische Informatie</span>
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          Vergoeding door Zorgverzekering
+        </h1>
+        <p class="text-xl text-gray-600">
+          Helder uitgelegd: hoe zit het met de vergoeding van behandelingen bij de Methode de Haas en hoe declareert u bij uw zorgverzekeraar?
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introductie -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="prose prose-lg mx-auto">
+          <p class="lead">
+            Een van de meest gestelde vragen is of behandelingen bij de Methode de Haas worden
+            vergoed door de zorgverzekering. Het korte antwoord: dat hangt af van uw aanvullende
+            verzekering. Deze pagina legt precies uit hoe de vergoeding werkt en wat u moet weten.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Basisverzekering vs Aanvullende Verzekering -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Basisverzekering vs Aanvullende Verzekering</h2>
+
+        <div class="prose prose-lg mx-auto">
+          <h3>Basisverzekering</h3>
+          <p>
+            De Methode de Haas valt <strong>niet</strong> onder de basisverzekering. De Nederlandse
+            basisverzekering dekt alleen reguliere fysiotherapie (onder bepaalde voorwaarden) en
+            erkende manuele therapie door geregistreerde manueel therapeuten.
+          </p>
+
+          <p>
+            De Methode de Haas is een unieke, verfijnde vorm van manuele therapie die niet valt
+            onder de reguliere, door de overheid erkende behandelmethoden. Daarom wordt deze niet
+            vergoed vanuit de basisverzekering.
+          </p>
+
+          <h3>Aanvullende Verzekering</h3>
+          <p>
+            De Methode de Haas valt wel onder de categorie <strong>"alternatieve geneeswijzen"</strong>
+            in de meeste aanvullende verzekeringen. Dit betekent dat veel zorgverzekeraars (een deel
+            van) de kosten vergoeden, afhankelijk van uw specifieke polis.
+          </p>
+
+          <div class="bg-emerald-50 p-6 rounded-xl my-8">
+            <p class="font-semibold text-gray-900 mb-2">Belangrijk om te Weten</p>
+            <p class="text-gray-700 mb-0">
+              Elke verzekeraar hanteert eigen voorwaarden en vergoedingspercentages. Het is daarom
+              essentieel om vooraf bij uw eigen zorgverzekeraar te informeren naar de precieze
+              vergoedingsmogelijkheden.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wat wordt Vergoed -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Wat wordt Vergoed?</h2>
+
+        <div class="prose prose-lg mx-auto">
+          <p>
+            De vergoeding verschilt sterk per zorgverzekeraar en per pakket. Hier zijn enkele
+            veel voorkomende regelingen:
+          </p>
+
+          <h3>Vergoedingspercentages</h3>
+          <p>
+            De meeste verzekeraars vergoeden tussen de <strong>50% en 100%</strong> van de
+            behandelkosten, tot een bepaald maximum per jaar. Enkele voorbeelden:
+          </p>
+
+          <ul>
+            <li><strong>50% vergoeding:</strong> U betaalt zelf de helft van de behandelkosten</li>
+            <li><strong>75% vergoeding:</strong> U betaalt een kwart van de behandelkosten</li>
+            <li><strong>100% vergoeding:</strong> Volledige dekking tot het jaarmaximum</li>
+          </ul>
+
+          <h3>Maximumbedragen</h3>
+          <p>
+            Er geldt vrijwel altijd een maximum vergoeding per kalenderjaar. Dit varieert van:
+          </p>
+
+          <ul>
+            <li><strong>Basis aanvullend:</strong> €100 - €300 per jaar</li>
+            <li><strong>Standaard aanvullend:</strong> €300 - €500 per jaar</li>
+            <li><strong>Uitgebreid aanvullend:</strong> €500 - €1000+ per jaar</li>
+          </ul>
+
+          <p>
+            Dit maximum geldt vaak voor <em>alle</em> alternatieve behandelingen samen (acupunctuur,
+            osteopathie, homeopathie, etc.). Als u ook andere alternatieve therapieën gebruikt,
+            moet u dit budget dus delen.
+          </p>
+
+          <h3>Aantal Behandelingen</h3>
+          <p>
+            Sommige verzekeraars stellen geen limiet aan het aantal behandelingen (alleen een
+            financieel maximum), terwijl andere een maximum aantal sessies per jaar hanteren,
+            bijvoorbeeld 9 of 12 behandelingen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hoe te Declareren -->
+  <section class="section bg-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Hoe Declareren bij uw Verzekeraar?</h2>
+
+        <div class="space-y-6 mb-12">
+          {stappen.map((stap) => (
+            <div class="flex gap-6 bg-white rounded-xl p-6 shadow-sm">
+              <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+                <span class="text-emerald-600 font-bold">{stap.nummer}</span>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">{stap.titel}</h3>
+                <p class="text-gray-600">{stap.beschrijving}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="prose prose-lg mx-auto">
+          <div class="bg-white p-6 rounded-xl">
+            <p class="font-semibold text-gray-900 mb-2">Let op:</p>
+            <p class="text-gray-700 mb-0">
+              Bij de meeste verzekeraars declareert u zelf na betaling van de behandeling. Wij
+              rekenen rechtstreeks met u af en u ontvangt een factuur die geschikt is voor
+              declaratie bij uw verzekeraar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wat staat op de Factuur -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Wat Staat op de Factuur?</h2>
+
+        <div class="prose prose-lg mx-auto">
+          <p>
+            Na elke behandeling ontvangt u van ons een factuur die voldoet aan alle eisen die
+            zorgverzekeraars stellen. Deze factuur bevat:
+          </p>
+
+          <ul>
+            <li><strong>Uw persoonlijke gegevens:</strong> Naam, adres en geboortedatum</li>
+            <li><strong>Behandelaar gegevens:</strong> Naam therapeut en praktijkinformatie</li>
+            <li><strong>Factuurnummer en datum:</strong> Unieke identificatie voor administratie</li>
+            <li><strong>Behandelcode:</strong> Specifieke code die verzekeraars herkennen</li>
+            <li><strong>Omschrijving:</strong> Type behandeling (Methode de Haas / Manuele therapie)</li>
+            <li><strong>Bedrag:</strong> Kosten van de behandeling inclusief BTW</li>
+          </ul>
+
+          <p>
+            Deze factuur kunt u direct indienen bij uw zorgverzekeraar. U hoeft zelf niets toe
+            te voegen of aan te passen.
+          </p>
+
+          <h3>Digitaal Declareren</h3>
+          <p>
+            De meeste zorgverzekeraars bieden tegenwoordig de mogelijkheid om digitaal te declareren
+            via hun app of website. Dit gaat meestal snel en eenvoudig:
+          </p>
+
+          <ol>
+            <li>Log in op de app of website van uw zorgverzekeraar</li>
+            <li>Ga naar "Declareren" of "Facturen indienen"</li>
+            <li>Upload een foto of scan van de factuur</li>
+            <li>Vul eventueel aanvullende vragen in</li>
+            <li>Verstuur de declaratie</li>
+          </ol>
+
+          <p>
+            Binnen enkele weken ontvangt u het vergoed bedrag op uw rekening gestort, afhankelijk
+            van uw polisvoorwaarden.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tips voor Maximale Vergoeding -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Tips voor Optimale Vergoeding</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          {tips.map((tip) => (
+            <div class="card p-6 flex items-start gap-3">
+              <svg class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p class="text-gray-700">{tip}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="prose prose-lg mx-auto">
+          <div class="bg-emerald-50 p-6 rounded-xl">
+            <p class="font-semibold text-gray-900 mb-2">Extra Tip: Combineer Polissen</p>
+            <p class="text-gray-700 mb-0">
+              Als u en uw partner beide een aanvullende verzekering hebben met vergoeding voor
+              alternatieve geneeswijzen, kunt u soms dubbel declareren. Informeer hiernaar bij
+              uw verzekeraars.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Veelgestelde Vragen -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Veelgestelde Vragen over Vergoeding</h2>
+
+        <div class="space-y-4">
+          <details class="bg-gray-50 rounded-xl shadow-sm group">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <span class="font-semibold text-gray-900 pr-4">Heb ik een verwijzing nodig van mijn huisarts?</span>
+              <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600">
+              <p>
+                Voor de meeste aanvullende verzekeringen is geen verwijzing nodig. Sommige verzekeraars
+                stellen wel de eis dat u eerst bij de huisarts bent geweest. Check dit vooraf bij uw
+                eigen verzekeraar.
+              </p>
+            </div>
+          </details>
+
+          <details class="bg-gray-50 rounded-xl shadow-sm group">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <span class="font-semibold text-gray-900 pr-4">Wat als mijn verzekeraar de declaratie afwijst?</span>
+              <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600">
+              <p>
+                Neem contact op met uw verzekeraar om te begrijpen waarom de declaratie is afgewezen.
+                Soms ontbreekt informatie of is het jaarmaximum bereikt. Wij kunnen u desgewenst
+                voorzien van aanvullende documentatie.
+              </p>
+            </div>
+          </details>
+
+          <details class="bg-gray-50 rounded-xl shadow-sm group">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <span class="font-semibold text-gray-900 pr-4">Kan ik een behandelplan vooraf laten goedkeuren?</span>
+              <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600">
+              <p>
+                Bij alternatieve geneeswijzen werken verzekeraars meestal niet met voorafgaande
+                goedkeuring. U declareert na elke behandeling. Vraag bij twijfel vooraf schriftelijke
+                bevestiging van uw verzekeraar over de vergoeding.
+              </p>
+            </div>
+          </details>
+
+          <details class="bg-gray-50 rounded-xl shadow-sm group">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <span class="font-semibold text-gray-900 pr-4">Wat zijn de behandelkosten?</span>
+              <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600">
+              <p>
+                Voor actuele tarieven verwijzen wij u naar onze praktijkinformatie of neemt u
+                contact met ons op. De kosten zijn transparant en worden vooraf gecommuniceerd.
+                Neem telefonisch contact op via 079 323 7900 voor meer informatie.
+              </p>
+            </div>
+          </details>
+
+          <details class="bg-gray-50 rounded-xl shadow-sm group">
+            <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+              <span class="font-semibold text-gray-900 pr-4">Kan ik betalen met een zorgpas of natura-vergoeding?</span>
+              <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600">
+              <p>
+                Voor alternatieve geneeswijzen werken de meeste verzekeraars met restitutie: u betaalt
+                zelf en declareert achteraf. Directe betaling via een zorgpas is doorgaans niet mogelijk.
+                Informeer bij uw verzekeraar naar de specifieke mogelijkheden.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="section bg-gradient-dark text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">
+          Vragen over Vergoeding of Declaratie?
+        </h2>
+        <p class="text-emerald-100 text-lg mb-8">
+          Neem gerust contact met ons op. We helpen u graag met informatie over declaraties
+          en vergoedingen.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="tel:+31793237900" class="btn bg-white text-emerald-700 hover:bg-gray-100 px-8 py-4 text-base font-semibold">
+            <svg class="w-5 h-5 mr-2 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            Bel 079 323 7900
+          </a>
+          <a href="/contact" class="btn bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-base font-semibold">
+            Contact Formulier
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gerelateerde Artikelen -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-8">Gerelateerde Artikelen</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="/kennisbank/eerste-behandeling-verwachten" class="card p-6 group">
+            <h3 class="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors mb-2">
+              Wat te Verwachten bij de Eerste Behandeling
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Alles over uw eerste afspraak bij de Methode de Haas
+            </p>
+          </a>
+
+          <a href="/kennisbank/behandeltraject-duur" class="card p-6 group">
+            <h3 class="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors mb-2">
+              Hoelang Duurt een Behandeltraject?
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Informatie over de duur en frequentie van behandelingen
+            </p>
+          </a>
+
+          <a href="/praktisch" class="card p-6 group">
+            <h3 class="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors mb-2">
+              Praktische Informatie
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Bereikbaarheid, openingstijden en contact
+            </p>
+          </a>
+
+          <a href="/veelgestelde-vragen" class="card p-6 group">
+            <h3 class="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors mb-2">
+              Veelgestelde Vragen
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Antwoorden op de meest gestelde vragen
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

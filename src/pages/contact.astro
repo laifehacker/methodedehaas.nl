@@ -1,0 +1,221 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Contact"
+  description="Neem contact op met Methode de Haas voor een afspraak. Gezondheidscentrum Corporalis, Dorpsstraat 182B/C/D in Zoetermeer. Telefoon: 079 323 7900."
+  keywords={['contact', 'afspraak maken', 'zoetermeer', 'corporalis', 'telefoon', 'locatie']}
+>
+  <Navbar slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-16 lg:py-24 bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          Contact
+        </h1>
+        <p class="text-xl text-gray-600">
+          Wilt u een afspraak maken of heeft u vragen? Neem gerust contact met ons op.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Info -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Details -->
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-8">Neem Contact Op</h2>
+
+          <div class="space-y-6">
+            <!-- Telefoon -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Telefoon</h3>
+                <p class="text-gray-600 mt-1">
+                  <a href="tel:+31793237900" class="text-emerald-600 hover:underline text-lg">079 323 7900</a>
+                </p>
+                <p class="text-sm text-gray-500 mt-1">
+                  Bel voor een afspraak of vragen
+                </p>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Email</h3>
+                <p class="text-gray-600 mt-1">
+                  <a href="mailto:info@methodedehaas.nl" class="text-emerald-600 hover:underline">info@methodedehaas.nl</a>
+                </p>
+              </div>
+            </div>
+
+            <!-- Adres -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Adres</h3>
+                <p class="text-gray-600 mt-1">
+                  Gezondheidscentrum Corporalis<br />
+                  Dorpsstraat 182B, C en D<br />
+                  2712 AR Zoetermeer
+                </p>
+              </div>
+            </div>
+
+            <!-- Openingstijden -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Openingstijden</h3>
+                <p class="text-gray-600 mt-1">
+                  Op afspraak<br />
+                  <span class="text-sm text-gray-500">Bel voor beschikbaarheid</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct bellen button -->
+          <div class="mt-8">
+            <a href="tel:+31793237900" class="btn btn-primary w-full sm:w-auto">
+              <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Bel Nu: 079 323 7900
+            </a>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-8">Locatie</h2>
+          <div class="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.5!2d4.4936!3d52.0571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b5e4c4f4c3b1%3A0x1234567890abcdef!2sDorpsstraat+182%2C+Zoetermeer!5e0!3m2!1snl!2snl!4v1234567890"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Locatie Methode de Haas - Gezondheidscentrum Corporalis Zoetermeer"
+            ></iframe>
+          </div>
+
+          <div class="mt-6 p-4 bg-emerald-50 rounded-xl">
+            <h3 class="font-semibold text-gray-900 mb-2">Routebeschrijving</h3>
+            <p class="text-gray-600 text-sm">
+              De praktijk is gevestigd in Gezondheidscentrum Corporalis aan de Dorpsstraat
+              in het centrum van Zoetermeer. Er is voldoende parkeergelegenheid in de buurt,
+              en het centrum is goed bereikbaar met openbaar vervoer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Stuur een Bericht</h2>
+          <p class="text-gray-600">
+            Heeft u een vraag? Vul het formulier in en wij nemen zo snel mogelijk contact met u op.
+          </p>
+        </div>
+
+        <form class="bg-white rounded-2xl p-8 shadow-sm">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="naam" class="block text-sm font-medium text-gray-700 mb-2">Naam *</label>
+              <input
+                type="text"
+                id="naam"
+                name="naam"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                placeholder="Uw naam"
+              />
+            </div>
+            <div>
+              <label for="telefoon" class="block text-sm font-medium text-gray-700 mb-2">Telefoon</label>
+              <input
+                type="tel"
+                id="telefoon"
+                name="telefoon"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                placeholder="Uw telefoonnummer"
+              />
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+              placeholder="uw@email.nl"
+            />
+          </div>
+
+          <div class="mt-6">
+            <label for="bericht" class="block text-sm font-medium text-gray-700 mb-2">Bericht *</label>
+            <textarea
+              id="bericht"
+              name="bericht"
+              rows="5"
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors resize-none"
+              placeholder="Beschrijf kort uw klachten of vraag..."
+            ></textarea>
+          </div>
+
+          <div class="mt-6">
+            <button type="submit" class="btn btn-primary w-full py-4">
+              Verstuur Bericht
+            </button>
+          </div>
+
+          <p class="mt-4 text-sm text-gray-500 text-center">
+            * Verplichte velden. Uw gegevens worden vertrouwelijk behandeld volgens ons
+            <a href="/privacybeleid" class="text-emerald-600 hover:underline">privacybeleid</a>.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

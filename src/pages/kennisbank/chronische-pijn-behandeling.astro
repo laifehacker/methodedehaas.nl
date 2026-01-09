@@ -1,0 +1,336 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+const faqs = [
+  {
+    vraag: 'Waarom hebben andere behandelingen niet geholpen bij mijn chronische pijn?',
+    antwoord: 'Veel behandelingen richten zich op symptoombestrijding - pijnstillers, ontspanningstechnieken, spierversterkende oefeningen. Deze kunnen tijdelijk helpen, maar als de onderliggende structurele oorzaak blijft bestaan, keren de klachten terug. Bij de Methode de Haas zoeken we naar de bron: standsafwijkingen in wervelkolom of bekken die de chronische pijn in stand houden.'
+  },
+  {
+    vraag: 'Kan chronische pijn na jaren nog verholpen worden?',
+    antwoord: 'Ja, in veel gevallen wel. Ook als de pijn al jaren bestaat, kan het herstellen van de natuurlijke stand van botstructuren verlichting geven. Het lichaam heeft een groot herstelvermogen. Wanneer de structurele oorzaak wordt weggenomen, kan het zenuwstelsel tot rust komen en kan chronische spanning verminderen. Het herstel kan wel tijd vragen - het lichaam moet wennen aan de nieuwe situatie.'
+  },
+  {
+    vraag: 'Hoeveel behandelingen zijn nodig bij chronische pijn?',
+    antwoord: 'Dit varieert sterk per persoon. Bij acute klachten zien we vaak snel resultaat. Bij chronische pijn - waarbij het lichaam jarenlang heeft gecompenseerd - kan meer tijd nodig zijn. Soms zijn 3-5 behandelingen voldoende, soms is een langere reeks nodig. We monitoren de voortgang en bespreken dit tijdens de behandelingen met u.'
+  },
+];
+
+const gerelateerd = [
+  { titel: 'Rugklachten Behandeling', href: '/kennisbank/rugklachten-behandeling' },
+  { titel: 'Nekklachten Behandeling', href: '/kennisbank/nekklachten-behandeling' },
+  { titel: 'Wat is Re-alignment?', href: '/kennisbank/wat-is-re-alignment' },
+  { titel: 'Het Zenuwstelsel', href: '/kennisbank/zenuwstelsel-uitleg' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Chronische Pijn Behandeling - Methode de Haas",
+  "description": "Behandeling van chronische pijn met de Methode de Haas. Ontdek hoe het aanpakken van structurele oorzaken langdurige verlichting kan bieden.",
+  "medicalAudience": "Patient",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Chronische pijn"
+  }
+};
+---
+
+<Layout
+  title="Chronische Pijn Behandeling"
+  description="Behandeling van chronische pijn met de Methode de Haas. Structurele aanpak voor langdurige verlichting van chronische klachten."
+  keywords={['chronische pijn', 'langdurige pijn', 'fibromyalgie', 'chronische klachten', 'pijnbehandeling', 'structurele behandeling']}
+  schema={schema}
+>
+  <Navbar slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-16 lg:py-24 bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <a href="/kennisbank" class="inline-flex items-center text-emerald-600 hover:text-emerald-700 mb-6 group">
+          <svg class="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Terug naar kennisbank
+        </a>
+
+        <span class="badge badge-emerald mb-4">Behandelbare Klachten</span>
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          Chronische Pijn Behandeling
+        </h1>
+        <p class="text-xl text-gray-600">
+          Jaren van pijn en onbegrip? Ontdek hoe het aanpakken van structurele oorzaken
+          u kan helpen waar andere behandelingen niet werkten.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="prose prose-lg mx-auto">
+          <h2>Wat is chronische pijn?</h2>
+          <p>
+            <strong>Chronische pijn</strong> is pijn die langer dan drie maanden aanhoudt. Het is
+            pijn die niet meer functioneel is - waar acute pijn een waarschuwing is dat er iets mis
+            is, lijkt chronische pijn zijn eigen leven te leiden. Het zenuwstelsel blijft
+            pijnsignalen sturen, ook als de oorspronkelijke verwonding allang genezen zou moeten zijn.
+          </p>
+          <p>
+            Voor mensen met chronische pijn is het een dagelijkse strijd. De pijn is er bij het
+            opstaan, tijdens het werk, bij hobby's. Het beïnvloedt alles: stemming, energie, sociale
+            contacten. En vaak is er geen duidelijke verklaring. Scans tonen niets bijzonders,
+            behandelingen helpen niet of maar tijdelijk. De frustratie groeit.
+          </p>
+
+          <h2>De vicieuze cirkel van chronische pijn</h2>
+          <p>
+            Chronische pijn ontstaat vaak niet plots, maar sluipt er in. Het begint met een acute
+            klacht - misschien een val, een onhandig tilmoment, of gewoon een verkeerde beweging.
+            In eerste instantie lijkt het normaal: acute pijn die wel zal overgaan. Maar het gaat
+            niet over. Of het komt steeds terug. Langzaam wordt de pijn chronisch.
+          </p>
+          <p>
+            Wat gebeurt er? Het lichaam begint te compenseren. Een standsafwijking in de rug wordt
+            gecompenseerd door spanning in de nek. De nekspanning veroorzaakt hoofdpijn. De hoofdpijn
+            leidt tot schouderspanning. Voor u het weet, zit u in een vicieuze cirkel van spanning,
+            compensatie en pijn.
+          </p>
+
+          <h2>Waarom blijft chronische pijn bestaan?</h2>
+          <p>
+            De vraag die elke chronische pijnpatiënt stelt: waarom gaat het niet over? Het antwoord
+            ligt vaak in het feit dat de <strong>onderliggende structurele oorzaak</strong> nooit is
+            aangepakt. Symptomen zijn behandeld, maar de bron blijft bestaan.
+          </p>
+          <p>
+            Stel: een wervel staat al jaren niet goed. Deze standsafwijking veroorzaakt chronische
+            spanning in omliggende spieren. De spieren werken harder om het lichaam in balans te
+            houden. Ze worden nooit echt ontspannen. Deze constante spanning leidt tot pijn, stijfheid
+            en uitputting. Massages, pijnstillers, fysiotherapie - ze kunnen tijdelijk verlichten,
+            maar de wervel staat nog steeds niet goed. De spanning keert terug. De pijn blijft.
+          </p>
+
+          <h2>De rol van het zenuwstelsel</h2>
+          <p>
+            Bij chronische pijn raakt het zenuwstelsel overgevoelig. Het heeft zo lang pijnsignalen
+            ontvangen dat het als het ware 'leert' om pijn te voelen. Zelfs kleine prikkels worden
+            als pijnlijk ervaren. Dit heet centrale sensitisatie - het zenuwstelsel wordt steeds
+            gevoeliger.
+          </p>
+          <p>
+            Hier zit een belangrijk inzicht: chronische pijn is niet 'tussen de oren', maar het
+            zenuwstelsel functioneert anders. En hier ligt ook de oplossing: wanneer we de structurele
+            oorzaak wegnemen, krijgt het zenuwstelsel de kans om te kalmeren. De constante prikkeling
+            stopt. Het zenuwstelsel kan zijn normale gevoeligheid herwinnen.
+          </p>
+
+          <h2>Veel voorkomende patronen van chronische pijn</h2>
+          <p>
+            Chronische pijn komt in verschillende vormen, maar er zijn herkenbare patronen:
+          </p>
+          <ul>
+            <li><strong>Chronische rugpijn:</strong> Vaak door een bekkenscheefstand of afwijking in lendenwervels</li>
+            <li><strong>Chronische nekpijn:</strong> Standsafwijkingen in de nek, vaak door jarenlang slechte houding</li>
+            <li><strong>Wijdverspreide pijn:</strong> Pijn op meerdere plaatsen tegelijk, door compensatiepatronen</li>
+            <li><strong>Chronische hoofdpijn:</strong> Vaak cervicogeen - vanuit de nek</li>
+            <li><strong>Fibromyalgie:</strong> Wijdverspreide pijn met moeheid, kan samenhangen met meerdere standsafwijkingen</li>
+          </ul>
+
+          <h2>De Methode de Haas aanpak voor chronische pijn</h2>
+          <p>
+            Bij de Methode de Haas behandelen we chronische pijn fundamenteel anders. We zoeken niet
+            naar symptoomverlichting, maar naar de <strong>structurele oorzaak</strong>. Waar zit de
+            standsafwijking die dit alles veroorzaakt? Welke compensaties zijn ontstaan? Hoe hangen
+            de verschillende klachten met elkaar samen?
+          </p>
+          <p>
+            Tijdens het onderzoek kijken we naar uw hele lichaam. We zoeken naar de primaire afwijking -
+            de eerste standsverandering waaruit alle andere compensaties zijn voortgekomen. Dit kan
+            een scheef bekken zijn, een gedraaide wervel, een blokkade in de nek. Vaak is het een
+            afwijking waar u zich niet eens bewust van bent.
+          </p>
+
+          <h3>Re-alignment als basis voor herstel</h3>
+          <p>
+            De behandeling bestaat uit het herstellen van de natuurlijke stand van botstructuren.
+            We brengen wervels, bekken en gewrichten terug in hun juiste positie. Dit is het fundament
+            waarop herstel kan plaatsvinden.
+          </p>
+          <p>
+            Wanneer de structuur weer klopt, kan het lichaam eindelijk ontspannen. De noodzaak tot
+            constante compensatie verdwijnt. Spieren die jarenlang overbelast waren, kunnen rusten.
+            Het zenuwstelsel krijgt andere signalen: geen constante druk meer, geen permanente spanning.
+            Het kan beginnen met kalmeren.
+          </p>
+
+          <h2>Herstel kost tijd</h2>
+          <p>
+            Het is belangrijk om realistische verwachtingen te hebben. Chronische pijn die jaren heeft
+            opgebouwd, verdwijnt niet in één behandeling. Het lichaam heeft tijd nodig om te wennen
+            aan de nieuwe situatie. Compensatiepatronen die jaren hebben bestaan, moeten afgebouwd
+            worden. Het zenuwstelsel moet leren om minder gevoelig te reageren.
+          </p>
+          <p>
+            Bij sommige patiënten zien we snel vooruitgang. Al na enkele behandelingen merken ze dat
+            de pijn afneemt, de energie toeneemt, het slapen beter gaat. Bij anderen is het een
+            geleidelijker proces. We behandelen in fasen: eerst de primaire afwijking, dan de
+            compensaties, en daarna onderhoud om de verbetering te behouden.
+          </p>
+
+          <blockquote>
+            "Na tien jaar chronische rugpijn had ik alles geprobeerd. Ik had pijnstillers, fysiotherapie,
+            chiropractie - niets hielp blijvend. Bij de Methode de Haas ontdekten ze dat mijn bekken
+            scheef stond. Na zes behandelingen voelde ik voor het eerst in jaren échte verbetering.
+            Nu, een jaar later, is de pijn 80% verminderd. Ik heb mijn leven terug."
+          </blockquote>
+
+          <h2>De samenhang van klachten</h2>
+          <p>
+            Een mooi aspect van het behandelen van chronische pijn via re-alignment is dat vaak
+            meerdere klachten tegelijk verbeteren. Patiënten komen voor rugpijn, maar merken dat ook
+            hun hoofdpijn vermindert. Of ze komen voor nekklachten en merken dat hun chronische
+            vermoeidheid afneemt.
+          </p>
+          <p>
+            Dit komt omdat alles met elkaar samenhangt. Wanneer we de fundering herstellen - het
+            bekken recht zetten, de wervelkolom in balans brengen - heeft dat effect op het hele
+            lichaam. De energiebalans verbetert. Het zenuwstelsel functioneert beter. Slaap wordt
+            dieper. Pijn vermindert niet alleen lokaal, maar over het hele lichaam.
+          </p>
+
+          <h2>Wat u zelf kunt doen</h2>
+          <p>
+            Naast de behandelingen zijn er dingen die u zelf kunt doen om het herstel te ondersteunen:
+          </p>
+          <ul>
+            <li><strong>Bewegen:</strong> Blijf in beweging, maar forceer niet. Wandelen is vaak goed</li>
+            <li><strong>Houding:</strong> Let op uw zithouding en werkplek ergonomie</li>
+            <li><strong>Stress:</strong> Chronische pijn en stress versterken elkaar, zoek ontspanning</li>
+            <li><strong>Slaap:</strong> Goede slaap is essentieel voor herstel van het zenuwstelsel</li>
+            <li><strong>Geduld:</strong> Herstel van chronische pijn vraagt tijd en volharding</li>
+          </ul>
+
+          <h2>Wanneer structurele behandeling zinvol is</h2>
+          <p>
+            Niet alle chronische pijn is structureel van oorsprong. Er zijn vormen van chronische
+            pijn waarbij andere factoren een rol spelen: auto-immuunziekten, reumatische aandoeningen,
+            neuropathische aandoeningen. Bij deze aandoeningen is medische behandeling noodzakelijk.
+          </p>
+          <p>
+            Maar in veel gevallen - waarschijnlijk meer dan u denkt - ligt er wel degelijk een
+            structurele component aan chronische pijn ten grondslag. Een standsafwijking die nooit
+            is onderkend. Een compensatiepatroon dat jarenlang heeft kunnen doorwoekeren. In deze
+            gevallen kan de Methode de Haas u helpen.
+          </p>
+
+          <h2>Hoop voor chronische pijnpatiënten</h2>
+          <p>
+            Als u jarenlang chronische pijn hebt, is het begrijpelijk dat u wellicht de hoop heeft
+            opgegeven. U heeft zoveel dingen geprobeerd die niet hielpen. Waarom zou dit anders zijn?
+          </p>
+          <p>
+            Het verschil zit in de aanpak. Wij kijken naar de structuur van uw lichaam. We zoeken
+            naar de oorzaak, niet naar symptoomverlichting. En in onze ervaring - opgebouwd over
+            meer dan 50 jaar - zien we dat veel chronische pijnpatiënten verlichting vinden wanneer
+            we de structurele oorzaak aanpakken.
+          </p>
+
+          <h2>Wanneer naar de praktijk komen?</h2>
+          <p>
+            Heeft u chronische pijn waar tot nu toe geen oplossing voor is gevonden? Blijven behandelingen
+            maar tijdelijk werken? Heeft u het gevoel dat er iets structureel niet klopt in uw lichaam?
+            Dan kan onderzoek bij de Methode de Haas zinvol zijn.
+          </p>
+          <p>
+            We kijken naar uw hele geschiedenis, doen een volledig lichamelijk onderzoek, en zoeken
+            naar de structurele oorzaak van uw chronische pijn. Bel gerust voor een afspraak op
+            <strong>079 323 7900</strong>. We begrijpen hoe belastend chronische pijn is en helpen u
+            graag verder.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Veelgestelde Vragen</h2>
+
+        <div class="space-y-4">
+          {faqs.map((faq) => (
+            <details class="bg-white rounded-xl shadow-sm group">
+              <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                <span class="font-semibold text-gray-900 pr-4">{faq.vraag}</span>
+                <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="px-6 pb-6 text-gray-600">
+                {faq.antwoord}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gerelateerde Artikelen -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Gerelateerde Artikelen</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {gerelateerd.map((artikel) => (
+            <a
+              href={artikel.href}
+              class="card p-5 group flex items-center justify-between"
+            >
+              <span class="font-medium text-gray-900 group-hover:text-emerald-600 transition-colors">
+                {artikel.titel}
+              </span>
+              <svg class="w-5 h-5 text-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-gradient-dark text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">
+          Klaar om uw chronische pijn aan te pakken?
+        </h2>
+        <p class="text-emerald-100 text-lg mb-8">
+          Neem contact met ons op. We zoeken naar de structurele oorzaak van uw klachten.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/contact" class="btn bg-white text-emerald-700 hover:bg-gray-100 px-8 py-4 text-base font-semibold">
+            Maak een Afspraak
+          </a>
+          <a href="tel:+31793237900" class="btn border-2 border-white text-white hover:bg-white/10 px-8 py-4 text-base">
+            <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            079 323 7900
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>

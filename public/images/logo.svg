@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon -->
+  <g transform="translate(10, 10)">
+    <circle cx="40" cy="40" r="38" fill="url(#logoGrad)"/>
+    <g fill="#fff">
+      <ellipse cx="40" cy="20" rx="12" ry="5"/>
+      <ellipse cx="40" cy="34" rx="14" ry="6"/>
+      <ellipse cx="40" cy="48" rx="14" ry="6"/>
+      <ellipse cx="40" cy="62" rx="12" ry="5"/>
+      <rect x="38" y="16" width="4" height="50" rx="2"/>
+    </g>
+  </g>
+
+  <!-- Text -->
+  <text x="105" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#111827">
+    Methode de Haas
+  </text>
+  <text x="105" y="72" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#6b7280">
+    Niet door kracht, maar door precisie
+  </text>
+</svg>

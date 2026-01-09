@@ -1,0 +1,141 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/methode-de-haas', label: 'De Methode' },
+  { href: '/wil-de-haas', label: 'Wil de Haas' },
+  { href: '/therapeuten', label: 'Therapeuten' },
+  { href: '/behandeling', label: 'Behandeling' },
+  { href: '/kennisbank', label: 'Kennisbank' },
+  { href: '/praktisch', label: 'Praktisch' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all duration-300" id="navbar">
+  <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-2 group">
+        <div class="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center group-hover:bg-emerald-700 transition-colors">
+          <span class="text-white font-bold text-lg">MH</span>
+        </div>
+        <div class="hidden sm:block">
+          <span class="text-lg font-semibold text-gray-900">Methode de Haas</span>
+          <span class="block text-xs text-gray-500">Manuele Therapie</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex items-center space-x-1">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'px-4 py-2 text-sm font-medium rounded-lg transition-colors',
+              currentPath === link.href
+                ? 'text-emerald-600 bg-emerald-50'
+                : 'text-gray-600 hover:text-emerald-600 hover:bg-gray-50'
+            ]}
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- CTA Button + Mobile Menu -->
+      <div class="flex items-center space-x-4">
+        <a
+          href="/contact"
+          class="hidden sm:inline-flex items-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-medium rounded-lg hover:bg-emerald-700 transition-colors shadow-sm"
+        >
+          Maak Afspraak
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+          type="button"
+          class="lg:hidden p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg"
+          id="mobile-menu-button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="sr-only">Menu openen</span>
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="menu-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="close-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="lg:hidden hidden" id="mobile-menu">
+      <div class="py-4 space-y-1 border-t border-gray-100">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'block px-4 py-3 text-base font-medium rounded-lg transition-colors',
+              currentPath === link.href
+                ? 'text-emerald-600 bg-emerald-50'
+                : 'text-gray-600 hover:text-emerald-600 hover:bg-gray-50'
+            ]}
+          >
+            {link.label}
+          </a>
+        ))}
+        <div class="pt-4 px-4">
+          <a
+            href="/contact"
+            class="block w-full text-center px-5 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors"
+          >
+            Maak Afspraak
+          </a>
+        </div>
+        <div class="pt-4 px-4 border-t border-gray-100 mt-4">
+          <p class="text-sm text-gray-500">
+            <a href="tel:+31793237900" class="hover:text-emerald-600">079 323 7900</a>
+          </p>
+          <p class="text-sm text-gray-500">Corporalis, Zoetermeer</p>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Spacer for fixed header -->
+<div class="h-16 lg:h-20"></div>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+    mobileMenuButton.setAttribute('aria-expanded', String(!isExpanded));
+    mobileMenu?.classList.toggle('hidden');
+    menuIcon?.classList.toggle('hidden');
+    closeIcon?.classList.toggle('hidden');
+  });
+
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  let lastScroll = 0;
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 50) {
+      navbar?.classList.add('shadow-md');
+    } else {
+      navbar?.classList.remove('shadow-md');
+    }
+
+    lastScroll = currentScroll;
+  });
+</script>

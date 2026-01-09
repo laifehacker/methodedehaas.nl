@@ -1,0 +1,448 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+const factoren = [
+  {
+    titel: 'Aard van de Klacht',
+    beschrijving: 'Acute klachten reageren vaak sneller dan chronische aandoeningen die al jaren bestaan.'
+  },
+  {
+    titel: 'Ernst van Standsafwijkingen',
+    beschrijving: 'Hoe groter de afwijkingen in stand van wervels en gewrichten, hoe meer behandelingen nodig kunnen zijn.'
+  },
+  {
+    titel: 'Leeftijd en Conditie',
+    beschrijving: 'Jonge, gezonde lichamen herstellen over het algemeen sneller dan oudere lichamen met meerdere klachten.'
+  },
+  {
+    titel: 'Leefstijl',
+    beschrijving: 'Werk, sport en dagelijkse gewoonten beïnvloeden het herstelproces en de frequentie van behandelingen.'
+  },
+  {
+    titel: 'Reactie op Behandeling',
+    beschrijving: 'Elk lichaam reageert anders. Sommigen herstellen snel, anderen hebben meer tijd nodig.'
+  },
+  {
+    titel: 'Compliance',
+    beschrijving: 'Opvolgen van adviezen en aandacht voor houding versnellen het herstel aanzienlijk.'
+  },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Hoelang Duurt een Behandeltraject? - Methode de Haas",
+  "description": "Alles over de duur van een behandeltraject bij de Methode de Haas. Hoeveel sessies zijn nodig en wat beïnvloedt de behandelduur?",
+  "author": {
+    "@type": "Organization",
+    "name": "Methode de Haas"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage"
+  }
+};
+---
+
+<Layout
+  title="Hoelang Duurt een Behandeltraject?"
+  description="Alles over de duur van een behandeltraject bij de Methode de Haas. Hoeveel sessies zijn nodig en wat beïnvloedt de behandelduur?"
+  keywords={['behandeltraject', 'duur behandeling', 'aantal sessies', 'methode de haas', 'behandelplan', 'herstelperiode']}
+  schema={schema}
+>
+  <Navbar slot="header" />
+
+  <!-- Hero -->
+  <section class="relative py-16 lg:py-24 bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="badge badge-emerald mb-4">Praktische Informatie</span>
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          Hoelang Duurt een Behandeltraject?
+        </h1>
+        <p class="text-xl text-gray-600">
+          Een eerlijk antwoord over de duur van behandelingen bij de Methode de Haas en welke factoren de behandelduur beïnvloeden.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introductie -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="prose prose-lg mx-auto">
+          <p class="lead">
+            "Hoeveel behandelingen heb ik nodig?" is een van de meest gestelde vragen. Het eerlijke
+            antwoord is: dat verschilt per persoon. Er bestaat geen standaard behandeltraject, omdat
+            elk lichaam uniek is en anders reageert op behandeling.
+          </p>
+
+          <p>
+            Deze pagina geeft u een realistisch beeld van wat u kunt verwachten en welke factoren
+            de duur van uw behandeltraject beïnvloeden.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Geen Standaard Antwoord -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Waarom Geen Standaard Antwoord?</h2>
+
+        <div class="prose prose-lg mx-auto">
+          <p>
+            Bij de Methode de Haas werken we niet met vaste protocollen of standaard behandelplannen.
+            Waarom niet? Omdat uw lichaam uniek is. Twee mensen met exact dezelfde klacht kunnen
+            compleet verschillend reageren op behandeling.
+          </p>
+
+          <div class="bg-emerald-50 p-6 rounded-xl my-8">
+            <p class="font-semibold text-gray-900 mb-2">Het Principe van Maatwerk</p>
+            <p class="text-gray-700 mb-0">
+              De Methode de Haas is geen "one-size-fits-all" aanpak. Elke behandeling wordt afgestemd
+              op wat uw lichaam op dat moment nodig heeft. Dit betekent dat het aantal behandelingen
+              varieert per persoon en per klacht.
+            </p>
+          </div>
+
+          <p>
+            We zien regelmatig dat patiënten met dezelfde diagnose een heel ander behandeltraject
+            doorlopen. De ene persoon voelt na één behandeling al significante verbetering, terwijl
+            de ander meer tijd en meerdere sessies nodig heeft om hetzelfde resultaat te bereiken.
+          </p>
+
+          <p>
+            Dit betekent niet dat de ene persoon "beter" of "sneller" herstelt dan de andere. Het
+            betekent simpelweg dat elk lichaam zijn eigen tempo heeft en zijn eigen verhaal vertelt.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Algemene Richtlijnen -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Algemene Richtlijnen</h2>
+
+        <div class="prose prose-lg mx-auto">
+          <p>
+            Hoewel we geen exacte voorspelling kunnen doen, zijn er wel algemene patronen die we
+            in de praktijk zien. Deze kunnen u een indicatie geven van wat te verwachten.
+          </p>
+
+          <h3>Acute, Recente Klachten</h3>
+          <p>
+            <strong>1 tot 3 behandelingen</strong> - Klachten die recent zijn ontstaan (enkele weken
+            tot enkele maanden) en nog niet chronisch zijn, reageren vaak snel op behandeling. Veel
+            patiënten ervaren al na de eerste of tweede sessie duidelijke verbetering.
+          </p>
+          <p>
+            Voorbeelden: acute rugpijn na verkeerd tillen, nekklachten na onhandig slapen, plotselinge
+            hoofdpijn zonder duidelijke oorzaak.
+          </p>
+
+          <h3>Klachten van Middellange Duur</h3>
+          <p>
+            <strong>3 tot 6 behandelingen</strong> - Klachten die al enkele maanden tot een jaar
+            bestaan, hebben vaak wat meer tijd nodig. Het lichaam heeft patronen ontwikkeld die
+            stapsgewijs doorbroken moeten worden.
+          </p>
+          <p>
+            Voorbeelden: aanhoudende schouderpijn, terugkerende hoofdpijn, langdurige nekstijfheid.
+          </p>
+
+          <h3>Chronische, Complexe Klachten</h3>
+          <p>
+            <strong>6 tot 12+ behandelingen</strong> - Klachten die al jaren bestaan of meerdere
+            lichaamsdelen betreffen, vragen om een langer behandeltraject. Het lichaam heeft tijd
+            nodig om ingesleten patronen te verwijderen en een nieuwe balans te vinden.
+          </p>
+          <p>
+            Voorbeelden: chronische rugpijn, langdurige bekkenproblemen, multiple klachten door
+            langdurige verkeerde houding.
+          </p>
+
+          <blockquote>
+            "Hoe langer een klacht bestaat, hoe meer tijd het lichaam over het algemeen nodig heeft
+            om te herstellen. Maar zelfs bij chronische klachten zien we vaak al na enkele behandelingen
+            duidelijke vooruitgang."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Factoren die Invloed Hebben -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Factoren die de Behandelduur Beïnvloeden</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          {factoren.map((factor) => (
+            <div class="card p-6">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">{factor.titel}</h3>
+              <p class="text-gray-600">{factor.beschrijving}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="prose prose-lg mx-auto">
+          <p>
+            Deze factoren werken samen en bepalen het individuele behandeltraject. Uw therapeut
+            bespreekt tijdens de intake wat in uw specifieke situatie realistisch is en wat u kunt
+            verwachten.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Duur per Behandeling -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Duur per Behandelsessie</h2>
+
+        <div class="prose prose-lg mx-auto">
+          <p>
+            Een vraag die we ook regelmatig krijgen: hoe lang duurt één behandeling? Ook hier geldt
+            maatwerk, maar we kunnen wel algemene tijdsaanduidingen geven.
+          </p>
+
+          <h3>Eerste Behandeling: 45-60 Minuten</h3>
+          <p>
+            De eerste afspraak neemt meer tijd in beslag omdat we uitgebreid kennismaken, uw klachten
+            in kaart brengen en een grondig lichamelijk onderzoek uitvoeren. Na het onderzoek volgt
+            de eerste behandeling.
+          </p>
+
+          <h3>Vervolgbehandelingen: 15-30 Minuten</h3>
+          <p>
+            Vervolgbehandelingen zijn korter maar intensief. Dit lijkt misschien kort, maar in deze
+            tijd wordt zeer gericht en nauwkeurig gewerkt. De kwaliteit en precisie van de behandeling
+            zijn belangrijker dan de duur.
+          </p>
+
+          <p>
+            Elke minuut wordt bewust en doelgericht gebruikt. Er is geen "opvulling" of tijdrekking.
+            Zodra de noodzakelijke correcties zijn uitgevoerd, is de behandeling voltooid.
+          </p>
+
+          <blockquote>
+            "Kwaliteit boven kwantiteit. Het gaat niet om hoe lang we behandelen, maar om hoe precies
+            we werken."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frequentie -->
+  <section class="section bg-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Frequentie van Behandelingen</h2>
+
+        <div class="prose prose-lg mx-auto">
+          <p>
+            Ook de frequentie waarmee u komt, varieert per situatie. In het begin komen patiënten
+            vaak wat vaker, waarna de frequentie afneemt naarmate het herstel vordert.
+          </p>
+
+          <h3>Startfase</h3>
+          <p>
+            In de eerste fase van behandeling plannen we afspraken meestal met tussenpozen van
+            <strong>1 tot 2 weken</strong>. Dit geeft uw lichaam de tijd om te reageren op de
+            behandeling, zonder dat het te lang duurt tussen sessies.
+          </p>
+
+          <h3>Onderhoudsfase</h3>
+          <p>
+            Als de klachten significant verminderen, kunnen we de afspraken meer spreiden. Bijvoorbeeld
+            <strong>eens per 3 tot 4 weken</strong>, om het behaalde resultaat te consolideren en kleine
+            correcties uit te voeren.
+          </p>
+
+          <h3>Afrondingsfase</h3>
+          <p>
+            In de laatste fase van het behandeltraject komen afspraken mogelijk nog minder frequent,
+            bijvoorbeeld <strong>eens per 6 tot 8 weken</strong>, als een soort "controle" om te
+            verzekeren dat alles stabiel blijft.
+          </p>
+
+          <div class="bg-white p-6 rounded-xl my-8">
+            <p class="font-semibold text-gray-900 mb-2">Let op:</p>
+            <p class="text-gray-700 mb-0">
+              Dit zijn gemiddelden. Uw therapeut bepaalt samen met u de ideale frequentie op basis
+              van uw reactie op de behandeling en uw persoonlijke situatie.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wanneer Stopt een Behandeltraject -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Wanneer Stopt een Behandeltraject?</h2>
+
+        <div class="prose prose-lg mx-auto">
+          <p>
+            Een behandeltraject stopt wanneer het doel bereikt is. Dit kan zijn:
+          </p>
+
+          <ul>
+            <li><strong>Klachtenvrij:</strong> U heeft geen last meer van de oorspronkelijke klacht</li>
+            <li><strong>Significant verbeterd:</strong> De klachten zijn verminderd tot een acceptabel niveau</li>
+            <li><strong>Stabiel:</strong> De situatie blijft goed zonder verdere behandeling</li>
+            <li><strong>Plateau bereikt:</strong> Verdere behandeling levert geen extra verbetering meer op</li>
+          </ul>
+
+          <p>
+            U beslist zelf wanneer u stopt. Er is geen druk om door te gaan als u tevreden bent met
+            het resultaat. Omgekeerd staan we altijd open voor vervolgbehandelingen als klachten
+            terugkeren of nieuwe klachten ontstaan.
+          </p>
+
+          <h3>Preventief Onderhoud</h3>
+          <p>
+            Sommige patiënten kiezen ervoor om na een succesvol behandeltraject periodiek terug te
+            komen voor een "onderhoudsbeurt". Dit is vergelijkbaar met regelmatige controle bij de
+            tandarts: kleine correcties uitvoeren voordat grotere problemen ontstaan.
+          </p>
+
+          <p>
+            Dit is geen verplichting, maar een optie voor wie preventief wil werken aan lichamelijke
+            gezondheid en balans.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Realistische Verwachtingen -->
+  <section class="section bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-12">Realistische Verwachtingen</h2>
+
+        <div class="prose prose-lg mx-auto">
+          <p>
+            Het is belangrijk om realistische verwachtingen te hebben over het behandeltraject.
+            Hier zijn enkele praktische punten:
+          </p>
+
+          <h3>Directe Resultaten</h3>
+          <p>
+            Veel patiënten voelen al na de eerste behandeling verbetering. Dit betekent niet
+            automatisch dat u na één keer "genezen" bent. Het lichaam heeft tijd nodig om de
+            nieuwe stand te accepteren en oude patronen te doorbreken.
+          </p>
+
+          <h3>Grillig Herstelproces</h3>
+          <p>
+            Herstel verloopt zelden lineair. U kunt periodes hebben waarin het snel vooruitgaat,
+            afgewisseld met momenten van stilstand of zelfs tijdelijke terugval. Dit is normaal
+            en onderdeel van het herstelproces.
+          </p>
+
+          <h3>Eigen Verantwoordelijkheid</h3>
+          <p>
+            De behandeling is slechts een deel van het herstel. Uw dagelijkse houding, beweging,
+            werk en leefstijl spelen een grote rol. Hoe meer u zelf doet aan preventie en goede
+            gewoonten, hoe sneller en beter het herstel.
+          </p>
+
+          <blockquote>
+            "Behandeling is als het planten van een zaad. De therapeut plant, maar u moet water geven
+            en voor goed licht zorgen."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="section bg-emerald-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="card p-8 text-center">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            Wilt u Weten wat een Behandeltraject voor ú Kan Betekenen?
+          </h2>
+          <p class="text-gray-600 mb-6">
+            Tijdens de intake bespreken we uitgebreid wat u kunt verwachten, specifiek voor uw situatie.
+            Neem contact op voor een afspraak.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/contact" class="btn btn-primary px-8 py-4">
+              Maak een Afspraak
+            </a>
+            <a href="/kennisbank/eerste-behandeling-verwachten" class="btn btn-secondary px-8 py-4">
+              Over de Eerste Behandeling
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gerelateerde Artikelen -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="section-title text-center mb-8">Gerelateerde Artikelen</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="/kennisbank/eerste-behandeling-verwachten" class="card p-6 group">
+            <h3 class="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors mb-2">
+              Wat te Verwachten bij de Eerste Behandeling
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Alles over uw eerste afspraak bij de Methode de Haas
+            </p>
+          </a>
+
+          <a href="/kennisbank/vergoeding-zorgverzekering" class="card p-6 group">
+            <h3 class="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors mb-2">
+              Vergoeding door Zorgverzekering
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Hoe wordt de behandeling vergoed?
+            </p>
+          </a>
+
+          <a href="/kennisbank/hoe-werkt-methode-de-haas" class="card p-6 group">
+            <h3 class="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors mb-2">
+              Hoe Werkt de Methode?
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Uitleg over het werkingsprincipe van de Methode de Haas
+            </p>
+          </a>
+
+          <a href="/veelgestelde-vragen" class="card p-6 group">
+            <h3 class="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors mb-2">
+              Veelgestelde Vragen
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Antwoorden op de meest gestelde vragen
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</Layout>
