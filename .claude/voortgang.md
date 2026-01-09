@@ -4,6 +4,32 @@ Dit document houdt de ontwikkelingsvoortgang bij. Elke significante wijziging wo
 
 ---
 
+## 2025-01-09 - Apache .htaccess Fix voor Productie
+
+### Wat is gedaan:
+- `.htaccess` toegevoegd aan `public/` folder
+- RewriteEngine regels voor URL routing
+- Caching en compressie instellingen
+
+### Probleem:
+- Productie site (methodedehaas.baksteen.dev) gaf 500 errors op alle pagina's behalve homepage
+- `/therapeuten` → 500 error
+- `/therapeuten/index.html` → werkte wel
+
+### Oorzaak:
+- Apache server serveerde geen `index.html` voor directory URLs zonder trailing slash
+- Astro genereert statische bestanden als `/pagina/index.html`
+- Browser vraagt `/pagina` aan, Apache kan dat niet vinden
+
+### Oplossing:
+- `.htaccess` met RewriteEngine regels om `/pagina` → `/pagina/index.html` te redirecten
+- Ook regels voor directories met trailing slash
+
+### Bestanden toegevoegd:
+- `public/.htaccess` - Apache URL routing configuratie
+
+---
+
 ## 2025-01-09 - Documentatie & Deploy Setup
 
 ### Wat is gedaan:
